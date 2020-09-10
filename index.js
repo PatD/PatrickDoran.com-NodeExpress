@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
  */
 
 
-app.get("/", (req, res) => {
+app.get("/nodefolio", (req, res) => {
     res.render("index", { title: "PatrickDoran.com" });
   });
 
