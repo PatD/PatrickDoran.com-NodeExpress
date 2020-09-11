@@ -1,31 +1,14 @@
 doctype html
+// View Source ❤️ forever. 
+// Minified markup flies faster, but it is hard to read through. 
+// You can see the unminified code on https://github.com/patd
 html(lang="en")
   head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title #{title}
-    link(rel='preload' href='new.css' as='style')
-    meta(name='description' content='Learn about Patrick Doran, a developer and designer working near Raleigh, North Carolina.')
-    meta(property='og:title' content='Patrick Doran, Developer & Designer')
-    meta(property='og:url' content='https://patrickdoran.com')
-    meta(property='og:description' content='Learn about Patrick Doran, a developer and designer near Raleigh, North Carolina.')
-    meta(property='og:type' content='website')
-    link(rel='manifest' href='manifest.json')
-    meta(name='mobile-web-app-capable' content='yes')
-    meta(name='apple-mobile-web-app-capable' content='yes')
-    meta(name='application-name' content='Patrick Doran')
-    meta(name='apple-mobile-web-app-title' content='Patrick Doran')
-    meta(name='theme-color' content='#444')
-    meta(name='msapplication-navbutton-color' content='#444')
-    meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
-    meta(name='msapplication-starturl' content='https://patrickdoran.com')
-    link(rel='icon' type='image/png' sizes='180x180' href='apple-touch-icon-180x180.png')
-    link(rel='apple-touch-icon' type='image/png' sizes='180x180' href='apple-touch-icon-180x180.png')
-    link(rel='stylesheet' href='new.css')
+    include headstuff
     
   header
     h1 Patrick Doran is a Senior Web Developer &amp; Interaction Designer
-    span Working near Raleigh, North Carolina
+    em Working near Raleigh, North Carolina
   blockquote
     | Patrick has been building and designing for the web since 
     time(datetime='1998-01') 1998
@@ -42,7 +25,7 @@ html(lang="en")
       abbr(title='HyperText Markup Language') HTML
       |  / 
       abbr(title='Cascading Style Sheets') CSS
-      |  / JavaScript / Vue.js / PHP / Python / 
+      |  / JavaScript / Vue.js / Node / Express / PHP / Python / 
       abbr(title='Syntactically Awesome Style Sheets') SASS
       |  / Git / WordPress
   dl
@@ -230,20 +213,26 @@ html(lang="en")
       | Professional work on 
       a(href='https://linkedin.com/in/patrickdoran' target='_blank' rel='noreferrer') LinkedIn
   hr
+  h3 About this website
+  p PatrickDoran.com has been live on the internet since #{yearSince}. According to the Node server that generated this page, that's close to #{yearsLive} years! PatrickDoran.com is usually in handcrafted HTML and CSS, but was for a short time built in Flash. This particular iteration went live in 2020.
+  ul 
+    li The CSS styles borrow excessively from 
+      |
+      a(href='https://github.com/xz/new.css' target='_blank' rel='noreferrer') New.css
+      |  a fast, markup-driven attribute-free framework. Looks clean, loads so fast. Go ahead and run Lighthouse on it. I'll wait.
+    li This markup is built in Pug, and served via Node and Express. 
+    li It utilizes fonts already installed on your device, because who has time to wait? 
+    li A service worker is utilized in case you go offline. This is a Progessive Web App (PWA).
+
+
+
   img(src='patrick_doran_web_developer.jpg' loading='lazy' alt='Photograph of Patrick Doran')
   footer
     br
     em
       | This is at least the 7th iteration of PatrickDoran.com.  
       br
-      sub
-        small
-          | The first one used the 
-          code &lt;frameset&gt;
-          |  tag.   
-          sub
-            small
-              q I regret nothing.
+
   script.
     if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js');

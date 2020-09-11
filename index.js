@@ -27,10 +27,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Homepage gets a view called home
 app.get("/", (req, res) => {
+    
+    // Year PatrickDoran.com domain was registered
+    var yearSince = 2004
+    
+    // The current year
+    var yearToday = new Date().getFullYear()
+ 
+
+
     res.render("home", { 
-        title: "Patrick Doran is a Developer & Interaction Designer in North Carolina." 
-      
-      
+        title: "Patrick Doran is a Developer & Interaction Designer in North Carolina.", 
+        yearSince: yearSince,
+        yearsLive: yearToday - yearSince // Returns the number of years the site has been live.
       });
  });
 
