@@ -9,23 +9,27 @@ html(lang="en")
   header
     h1 Patrick Doran is a Senior Web Developer &amp; Interaction Designer
     em Working near Raleigh, North Carolina
+  
+  p
+    | Patrick Doran designs fast user interfaces, codes modern JavaScript applications, sketches wireframes, and obsesses about usability and performance. Lately, Patrick has spent a lot of time with Vue.js and SharePoint development, design and branding.
+ 
   blockquote
     | Patrick has been building and designing for the web since 
-    time(datetime='1998-01') 1998
-    | . &#x1F4BE; 
+    strong
+     time(datetime='1998-01') 1998
+      | . &#x1F4BE; 
     small
       cite
         a(title='Follow this link for citation reference.' target='_blank' href='patrick_doran_work_history.jpg') [1]
-  p
-    | Patrick designs mobile interfaces, codes modern JavaScript applications, sketches wireframes, and obsesses about usability and performance. Lately, Patrick has spent a lot of time with Vue.js and SharePoint development, design and branding.
-  h2 Specializing in:
+  hr
+  h2 Specializing In
   dl
     dt Front-End Web Development  &#x1F6E0;&#xFE0F;
     dd
       abbr(title='HyperText Markup Language') HTML
       |  / 
       abbr(title='Cascading Style Sheets') CSS
-      |  / JavaScript / Vue.js / Node / Express / PHP / Python / 
+      |  / JavaScript / Vue.js / Node / Express / PHP / Python / Svelte / 
       abbr(title='Syntactically Awesome Style Sheets') SASS
       |  / Git / WordPress
   dl
@@ -40,35 +44,9 @@ html(lang="en")
       | ) / Teams / Workflow &amp; Power Automate
   hr
   h3 Speaking &amp; Writing
-  ul
-    li
-      | &#x1F4CB; Microsoft.com 
-      a(href='https://docs.microsoft.com/en-us/microsoft-365/community/creating-useful-views-in-lists-libraries' target='_blank' rel='noreferrer') Microsoft 365 Community Docs: Creating Useful Views
-      | , 2020
-    li
-      | &#x1F4CB; Microsoft.com 
-      a(href='https://docs.microsoft.com/en-us/microsoft-365/community/large-lists-large-libraries-in-sharepoint' target='_blank' rel='noreferrer') Microsoft 365 Community Docs: Architecting Large Lists in SharePoint
-      | , 2020
-    li
-      | &#x1F4CB; Microsoft.com 
-      a(href='https://docs.microsoft.com/en-us/microsoft-365/community/versioning-basics-best-practices' target='_blank' rel='noreferrer') Microsoft 365 Community Docs: Versioning in SharePoint
-      | , 2020
-    li
-      | &#x1F4CB; Microsoft.com 
-      a(href='https://docs.microsoft.com/en-us/microsoft-365/community/permission-model-differences' target='_blank' rel='noreferrer') Microsoft 365 Community Docs: Permission Models in SharePoint
-      | , 2020
-    li
-      | &#x1F4E3; SharePoint Engage Conference 
-      a(href='https://docs.google.com/presentation/d/1NW3BZtvG2jSI3thMt8de24i29yw8xOlkj71nJHxsNDo/' target='_blank' rel='noreferrer') Shouting at SharePoint
-      | , 2017
-    li
-      | &#x1F4E3; SharePoint Engage Conference 
-      a(href='https://www.slideshare.net/patrickdoran/the-humble-mighty-sharepoint-url-query-string' target='_blank' rel='noreferrer') The Humble, Mighty Query String
-      | , 2016
-    li
-      | &#x1F4E3; SharePoint Saturday Durham 
-      a(href='https://docs.google.com/presentation/d/1lqf3hXqYHD9MlnkShjLPKa3YAgLziz105kABz2clwdE/' target='_blank' rel='noreferrer') Using SPServices for SharePoint JavaScript
-      | , 2014
+
+  ul(id="svelteComponent")
+
   hr
   h3 Recent Coding Examples
   details
@@ -235,5 +213,6 @@ html(lang="en")
 
   script.
     if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js');
+    // navigator.serviceWorker.register('service-worker.js');
     }
+  script(src='patrickdoran_svelte_bundle.js')
