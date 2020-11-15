@@ -1,12 +1,13 @@
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v3').then(function(cache) {
+    caches.open('v4').then(function(cache) {
       return cache.addAll([
         '/',
         '/patrick_doran_web_developer.jpg',
         '/patrick_doran_work_history.jpg',
-        '/new.css'
+        '/new.css',
+        '/patrickdoran_svelte_bundle.js'
       ]);
     })
   );
@@ -25,8 +26,8 @@ self.addEventListener('fetch', function(event) {
         // and serve second one
         let responseClone = response.clone();
         
-        caches.open('v3').then(function (cache) {
-          cache.put(event.request, responseClone);
+        caches.open('v4').then(function (cache) {
+         // cache.put(event.request, responseClone);
         });
         return response;
       }).catch(function () {

@@ -1,6 +1,6 @@
 doctype html
 // View Source ❤️ forever. 
-// Minified markup flies faster, but it is hard to read through. 
+// Minified markup flies fastest, but it is hard to read through. 
 // You can see the unminified code on https://github.com/patd
 html(lang="en")
   head
@@ -204,7 +204,7 @@ html(lang="en")
 
 
 
-  img(src='patrick_doran_web_developer.jpg' loading='lazy' alt='Photograph of Patrick Doran')
+  img(src='patrick_doran_web_developer.jpg' width='750' height='311' loading='lazy' alt='Photograph of Patrick Doran')
   footer
     br
     em
@@ -213,6 +213,6 @@ html(lang="en")
 
   script.
     if ('serviceWorker' in navigator) {
-    // navigator.serviceWorker.register('service-worker.js');
+      navigator.serviceWorker.register('service-worker.js');
     }
   script(src='patrickdoran_svelte_bundle.js')
