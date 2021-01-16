@@ -11,7 +11,6 @@
   
 }
 
-
 /* Chrome85 rendering speedup */
  article {content-visibility:auto;}
 
@@ -84,11 +83,23 @@ img {
   header h1 {font-size:4.5rem;line-height: 1.15;text-shadow:1px 1px 1px #666666}
   h2,h3{font-size:2.75rem;line-height: 1.2;}
   /* Customized to fit in new.css */
-  /* #patrickdorantimeline{width: 98vw;left:-50%;position: relative;} */
+  
+  /* Makes the timeline go wider */
   #patrickdorantimeline{
     margin-left: calc(60% - 50vw);
     margin-right: calc(60% - 50vw);
   }
+}
+
+picture{filter:drop-shadow(-5px 0px 0px #ccc)}
+
+picture img{
+  /* border-left:5px solid var(--nc-bg-3); */
+  
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  max-width:23%;
+  /* margin:.5em auto; */
+  /* display: block; */
 }
 
 /* Timeline JS styles */
