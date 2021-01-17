@@ -1,13 +1,14 @@
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v4').then(function(cache) {
+    caches.open('v5').then(function(cache) {
       return cache.addAll([
         '/',
         '/patrick_doran_web_developer.jpg',
         '/patrick_doran_work_history.jpg',
         '/new.css',
-        '/patrickdoran_svelte_bundle.js'
+        '/patrickdoran_svelte_bundle.js',
+        '/patrickdoran_react_timeline.js'
       ]);
     })
   );

@@ -78,6 +78,15 @@ img {
   height:auto;
 }
 
+section picture{
+  filter:drop-shadow(-5px 0px 0px #ccc);
+  right: -20px;
+  position: relative;}
+
+section picture img{
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
 
 @media (min-width: 768px) {  
   header h1 {font-size:4.5rem;line-height: 1.15;text-shadow:1px 1px 1px #666666}
@@ -89,18 +98,16 @@ img {
     margin-left: calc(60% - 50vw);
     margin-right: calc(60% - 50vw);
   }
-}
 
-picture{filter:drop-shadow(-5px 0px 0px #ccc)}
-
-picture img{
-  /* border-left:5px solid var(--nc-bg-3); */
+  section{
+    display: grid;
+    grid-template-columns: auto 180px;
+  }
   
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  max-width:23%;
-  /* margin:.5em auto; */
-  /* display: block; */
+  
 }
+
+
 
 /* Timeline JS styles */
 /* #patrickdorantimeline{content-visibility:visible} */

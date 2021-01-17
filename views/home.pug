@@ -10,22 +10,26 @@ html(lang="en")
     h1 Patrick Doran is a Senior Web Developer &amp; Interaction Designer
     em Working near Raleigh, North Carolina
     span(title='rolling trackballs 7 days a week') 🖲 
+  
   section
+    div
+      p
+        | Patrick Doran designs fast user interfaces, codes modern JavaScript applications, sketches wireframes, and obsesses about usability and performance. Lately, Patrick has spent a lot of time with Vue.js and SharePoint development, design and branding.
+    
+      blockquote
+        | Patrick has been building and designing for the web since 
+        strong
+        time(datetime='1998-01') 1998
+          | . &#x1F4BE; 
+        small
+          cite
+            a(title='Follow this link for citation reference.' target='_blank' href='patrick_doran_work_history.jpg') [1]
     picture
       source(srcset="patrick_doran_header_photo.webp" media="(min-width: 600px)" type="image/webp")
       img(src="patrick_doran_header_photo.jpg" title="Photo of Patrick Doran. He's a web developer. In this photo he is wearing sunglasses and smiling")
-  main
-    p
-      | Patrick Doran designs fast user interfaces, codes modern JavaScript applications, sketches wireframes, and obsesses about usability and performance. Lately, Patrick has spent a lot of time with Vue.js and SharePoint development, design and branding.
+    
   
-    blockquote
-      | Patrick has been building and designing for the web since 
-      strong
-      time(datetime='1998-01') 1998
-        | . &#x1F4BE; 
-      small
-        cite
-          a(title='Follow this link for citation reference.' target='_blank' href='patrick_doran_work_history.jpg') [1]
+  main
     hr
     h2 Specializing In
     dl
@@ -220,6 +224,6 @@ html(lang="en")
       br
 
   script.
-    if ('serviceWorker' in navigator) { /* navigator.serviceWorker.register('service-worker.js'); */}
+    if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
   script(defer src='patrickdoran_svelte_bundle.js')
   script(defer src='patrickdoran_react_timeline.js')
