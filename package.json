@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/PatD/PatrickDoran.com-NodeExpress#readme",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.16",
+    "tailwindcss": "^3.0.24"
   },
   "dependencies": {
     "express": "^4.17.1",
