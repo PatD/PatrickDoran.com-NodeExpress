@@ -1,7 +1,11 @@
 module.exports = {
   content: ["./views/**/*.{pug,html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        leaguespartan: ["'league_spartanbold'", "serif"]
+      }
+    },
   },
   plugins: [],
 }

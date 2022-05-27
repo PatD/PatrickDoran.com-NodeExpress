@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'league_spartanbold';
+    src: url('./leaguespartan-bold-webfont.woff') format('woff');
+  }
+
+h1{
+    @apply text-6xl text-emerald-700 mb-10 font-leaguespartan text
+}
+
 h2{
-    @apply font-extrabold text-2xl font-serif text-emerald-700
+    @apply text-2xl text-emerald-700 font-leaguespartan
+    
 }
 
 #svelteComponent li {

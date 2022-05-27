@@ -486,6 +486,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -496,9 +501,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 5rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .block {
@@ -513,20 +517,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
-.w-16 {
-  width: 4rem;
-}
-
-.w-60 {
-  width: 15rem;
-}
-
 .w-36 {
   width: 9rem;
-}
-
-.snap-center {
-  scroll-snap-align: center;
 }
 
 .grid-flow-col {
@@ -543,22 +535,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.place-content-center {
-  place-content: center;
-}
-
-.content-center {
-  align-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .space-x-16 > :not([hidden]) ~ :not([hidden]) {
@@ -579,17 +555,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.self-center {
-  align-self: center;
-}
-
 .rounded-full {
   border-radius: 9999px;
 }
 
-.rounded-t-full {
-  border-top-left-radius: 9999px;
-  border-top-right-radius: 9999px;
+.border-4 {
+  border-width: 4px;
 }
 
 .border-t-4 {
@@ -614,26 +585,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
 .font-extrabold {
   font-weight: 800;
 }
 
-.text-emerald-700 {
+.text-emerald-800 {
   --tw-text-opacity: 1;
-  color: rgb(4 120 87 / var(--tw-text-opacity));
+  color: rgb(6 95 70 / var(--tw-text-opacity));
+}
+
+.opacity-40 {
+  opacity: 0.4;
 }
 
 .shadow-inner {
@@ -642,16 +613,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.-hue-rotate-60 {
-  --tw-hue-rotate: hue-rotate(-60deg);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+@font-face {
+  font-family: 'league_spartanbold';
+
+  src: url('./leaguespartan-bold-webfont.woff') format('woff');
+}
+
+h1 {
+  margin-bottom: 2.5rem;
+  font-family: 'league_spartanbold', serif;
+  font-size: 3.75rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(4 120 87 / var(--tw-text-opacity));
 }
 
 h2 {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: 'league_spartanbold', serif;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 800;
   --tw-text-opacity: 1;
   color: rgb(4 120 87 / var(--tw-text-opacity));
 }
@@ -677,4 +657,8 @@ h2 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+.hover\:opacity-60:hover {
+  opacity: 0.6;
 }
