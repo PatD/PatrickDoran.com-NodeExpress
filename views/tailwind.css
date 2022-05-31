@@ -33,11 +33,11 @@ header dl {
 }
 
 header dt{
-    @apply font-extrabold text-center mb-1
+    @apply font-extrabold text-center mb-1 text-emerald-700
 }
 
 header dd{
-    @apply text-center font-mono inline-block align-middle px-2 py-0.5 my-1 mx-auto rounded-md bg-green-100
+    @apply text-center font-mono inline-block align-middle px-2 py-0.5 my-1 mx-auto rounded-md bg-green-50
 }
 
 blockquote {
@@ -82,11 +82,12 @@ h2{
 
 
 main p {
-    @apply mb-5
+    @apply mb-5 text-lg
 }
 
 #svelteComponent li {
-    @apply flex-shrink p-8 max-w-full w-full sm:w-1/4 lg:w-1/4 lg:px-6 bg-white
+    /* @apply flex-shrink p-8 max-w-full w-full sm:w-1/4 lg:w-1/4 lg:px-6 bg-white */
+    
 }
 
 
