@@ -39,16 +39,21 @@ onMount(async () => {
 	// Remove Wordpress markup from GraphQL 
 		x.node.excerpt = x.node.excerpt.replace( /(<([^>]+)>)/ig, '');
 		x.node.content = x.node.content.replace( /(<([^>]+)>)/ig, '');
-	// Trim date to just the year
-		x.node.date = x.node.date.substring(0, 4);
-		
 		filteredItems.push(x.node)
 	})
 });
 </script>
 
 {#each items as listitem}
-<li>{listitem.node.content} <a href={listitem.node.excerpt} target='_blank' rel='noreferrer'>{listitem.node.title}</a>, {listitem.node.date}</li>
+<li> 
+	<a href={listitem.node.excerpt} target="_blank" rel="noreferrer">
+	<header>{listitem.node.content.substring(0,3)}</header>
+	<h3>{listitem.node.content.slice(3)}</h3>
+		<span>{listitem.node.title}</span>
+	</a>
+	<time datetime={listitem.node.date}>{listitem.node.date.substring(0, 4)}</time>
+</li>
+
 {:else}
 <li>Loading GraphQL data from a headless WordPress site into a Svelte component...</li>
 {/each}
