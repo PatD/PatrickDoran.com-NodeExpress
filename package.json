@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "tailwind": "npx tailwindcss -i ./views/tailwind.css -o ./public/tailwind_patrickdoran.css --watch",
+    "tailwindBuild": "npx tailwindcss -i ./views/tailwind.css -o ./public/tailwind_patrickdoran.css --watch --minify"
   },
   "repository": {
     "type": "git",

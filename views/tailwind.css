@@ -94,7 +94,7 @@ main p {
 }
 
 #svelteComponent li a header {
-    @apply text-3xl rounded-full shadow-md border-2 inline-block px-4 py-3
+    @apply text-3xl rounded-full shadow-md border-2 inline-block px-4 py-3 
 }
 
 #svelteComponent li a h3 {
