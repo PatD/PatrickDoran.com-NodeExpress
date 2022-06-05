@@ -2,7 +2,7 @@ doctype html
 // View Source ❤️ forever. 
 // Minified markup flies fastest, but it is hard to read through. 
 // You can see the unminified code on https://github.com/patd
-html(lang="en" class="bg-amber-50 border-t-4 border-emerald-700")
+html(lang="en" class="bg-amber-100 border-t-4 border-emerald-700")
   head
     include headstuff
 
@@ -25,11 +25,8 @@ html(lang="en" class="bg-amber-50 border-t-4 border-emerald-700")
       <path d="M500,10C229.4,10,10,229.4,10,500c0,270.6,219.4,490,490,490c270.6,0,490-219.4,490-490C990,229.4,770.6,10,500,10z M635,644.4c-102.2,0-137.7-46.4-156.6-104.2l-18.9-59.6c-14.2-43.5-25.6-74.9-77.6-74.9c-36,0-83,23.6-83,96.9c0,57.2,39.3,92.9,80,92.9c34.6,0,55.3-19.4,66.1-29.1l18.1,51.6c-12.3,8.9-37.5,26.4-87.2,26.4c-68.7,0-134-48.8-134-139.4c0-94.1,68-149.5,138.1-149.5c78.6,0,107.9,28.6,132.7,106l19.5,59.5c14.2,43.5,44.1,75.1,103.8,75.1c40.2,0,61.5-8.9,61.5-31c0-17.3-10-29.8-40.2-36.9l-40.2-9.5c-49-11.9-68.5-37.5-68.5-78c0-64.9,52-85.2,105.2-85.2c60.3,0,96.9,22,101.6,75.6l-59.1,7.1c-2.4-25.6-17.7-36.3-46.1-36.3c-26,0-41.9,11.9-41.9,32.2c0,17.9,7.7,28.6,33.7,34.6l37.8,8.3c50.8,11.9,78,36.9,78,85.2C757.9,621.8,708.3,644.4,635,644.4z"/>
       </svg>
 
-
-
-  main
-
-    section(class='order-2 col-span-5')
+  div(class="grid grid-cols-12 gap-4 mx-auto px-12 auto-rows-max")
+    header(class="col-start-4 col-span-9")
       h1
         span Patrick Doran 
         br
@@ -37,247 +34,244 @@ html(lang="en" class="bg-amber-50 border-t-4 border-emerald-700")
         span(class='text-7xl') &amp; 
         | Interaction Designer
         sup *
-      
+        
       em Rolling trackballs near Raleigh, North Carolina 
-      span 🖲 
+        span 🖲 
+        
+      p Patrick Doran designs fast user interfaces, codes modern JavaScript applications, sketches wireframes, and obsesses about usability and performance. 
+      p Lately, Patrick has spent a lot of time with Vue.js and SharePoint development, design and branding.
       
-      p
-        | Patrick Doran designs fast user interfaces, codes modern JavaScript applications, sketches wireframes, and obsesses about usability and performance. 
-      p  
-        | Lately, Patrick has spent a lot of time with Vue.js and SharePoint development, design and branding.
-      
+      blockquote
+        i * 
+        em Patrick has been building and designing 
+          a(title='Follow this link for citation reference.' href='patrick_doran_work_history.jpg') on the web since 
+            time(datetime='1998-01') 1998 
+              span &#x1F4BE; 
+
+    main(class="col-start-4 col-span-9")    
+          
+      article
+        h2 Speaking &amp; Writing
+        ul(id="svelteComponent")
+          
+      article
+        h2 Recent Coding Examples
+        
+        details
+          summary Azure Cognitive Services handwriting recognition with JavaScript
+          blockquote
+            p
+              | A proof-of-concept - the web interface POSTs a document to Azure Cognative Services and returns the value of any handwritten text in it.
+            p
+              em
+                | Built with JavaScript, Axios JS, and Azure Cognative Services ML Handwriting Recognition.
+            p
+              | View complete code 
+              a(href='https://gist.github.com/PatD/abf44488a09f3447e04660a0a510047b' target='_blank' rel='noreferrer') on GitHub
+              | .
+        details
+          summary Load SharePoint REST data with Axios, display with Tabulator.js 
+          blockquote
+            p
+              | Solving a real-world business problem - user needs to select muliple SharePoint List Items, and pass those selections to another interface, to generate PDFs.
+            p
+              em
+                | Built with JavaScript, SharePoint REST web services, Axios.js, Tabulator.js and the browser&apos;s LocalStorage API.
+            p
+              | View complete code 
+              a(href='https://gist.github.com/PatD/dab385de8fcde42e612287569df11cd2' target='_blank' rel='noreferrer') on GitHub
+              | .
+        details
+          summary Prevent survey re-takes with a cookie that expires after a day
+          blockquote
+            p
+              | JavaScript that checks for a cookie before a survey is taken, and writes one if there isn&apos;t one already.
+            p
+              | View complete code 
+              a(href='https://gist.github.com/PatD/75a58a0906b87ec6324ca473ce09ba2e' target='_blank' rel='noreferrer') on GitHub
+              | .
+        details
+          summary JavaScript and SharePoint: Convert List Item to PDF
+          blockquote
+            p
+              | Reads a query string from a SharePoint URL, and then generates a PDF based off that data.
+            p
+              em Uses SharePoint On-Premise, Axios JS, and the pdfMake library.
+            p
+              | View complete code 
+              a(href='https://gist.github.com/PatD/634200e8f8153281ac7b3dfc426d17fb' target='_blank' rel='noreferrer') on GitHub
+              | .
+        details
+          summary CSS for SharePoint UI upgrade
+          blockquote
+            p CSS styles to restyle the default SharePoint interface.
+            p
+              | View complete code 
+              a(href='https://gist.github.com/PatD/21e9e098ac02ee1af24b05448619576b' target='_blank' rel='noreferrer') on GitHub
+              | .
+        details
+          summary SharePoint REST API and JavaScript: dynamic dropdowns
+          blockquote
+            p JavaScript to generate dropdown menus based on the values in a SharePoint list.
+            p
+              | View complete code 
+              a(href='https://gist.github.com/PatD/844b4dff0f2812b84227b3b371a577b7' target='_blank' rel='noreferrer') on GitHub
+              | .
+        details
+          summary REST Web Services driven user interface with JavaScript and HTML
+          blockquote
+            p
+              | Based on the current date, creates dropdown menus that query a REST endpoint for dynamically generated PDF reports.
+            p
+              | View complete code on 
+              a(href='https://gist.github.com/PatD/75a58a0906b87ec6324ca473ce09ba2e' target='_blank' rel='noreferrer') On Github
+              | .
+
+      article
+        h2 Recent Design &amp; Development Projects
         blockquote
-          i * 
-          em Patrick has been building and designing 
-            a(title='Follow this link for citation reference.' href='patrick_doran_work_history.jpg') on the web since 
-              time(datetime='1998-01') 1998 
-                span &#x1F4BE; 
-          
-       
-        article(class="my-5")
-          h2 Speaking &amp; Writing
-          ul(id="svelteComponent")
-           
-        article(class="my-5")
-          h2 Recent Coding Examples
-          details
-            summary Azure Cognitive Services handwriting recognition with JavaScript
-            blockquote
-              p
-                | A proof-of-concept - the web interface POSTs a document to Azure Cognative Services and returns the value of any handwritten text in it.
-              p
-                em
-                  | Built with JavaScript, Axios JS, and Azure Cognative Services ML Handwriting Recognition.
-              p
-                | View complete code 
-                a(href='https://gist.github.com/PatD/abf44488a09f3447e04660a0a510047b' target='_blank' rel='noreferrer') on GitHub
-                | .
-          details
-            summary Load SharePoint REST data with Axios, display with Tabulator.js 
-            blockquote
-              p
-                | Solving a real-world business problem - user needs to select muliple SharePoint List Items, and pass those selections to another interface, to generate PDFs.
-              p
-                em
-                  | Built with JavaScript, SharePoint REST web services, Axios.js, Tabulator.js and the browser&apos;s LocalStorage API.
-              p
-                | View complete code 
-                a(href='https://gist.github.com/PatD/dab385de8fcde42e612287569df11cd2' target='_blank' rel='noreferrer') on GitHub
-                | .
-          details
-            summary Prevent survey re-takes with a cookie that expires after a day
-            blockquote
-              p
-                | JavaScript that checks for a cookie before a survey is taken, and writes one if there isn&apos;t one already.
-              p
-                | View complete code 
-                a(href='https://gist.github.com/PatD/75a58a0906b87ec6324ca473ce09ba2e' target='_blank' rel='noreferrer') on GitHub
-                | .
-          details
-            summary JavaScript and SharePoint: Convert List Item to PDF
-            blockquote
-              p
-                | Reads a query string from a SharePoint URL, and then generates a PDF based off that data.
-              p
-                em Uses SharePoint On-Premise, Axios JS, and the pdfMake library.
-              p
-                | View complete code 
-                a(href='https://gist.github.com/PatD/634200e8f8153281ac7b3dfc426d17fb' target='_blank' rel='noreferrer') on GitHub
-                | .
-          details
-            summary CSS for SharePoint UI upgrade
-            blockquote
-              p CSS styles to restyle the default SharePoint interface.
-              p
-                | View complete code 
-                a(href='https://gist.github.com/PatD/21e9e098ac02ee1af24b05448619576b' target='_blank' rel='noreferrer') on GitHub
-                | .
-          details
-            summary SharePoint REST API and JavaScript: dynamic dropdowns
-            blockquote
-              p JavaScript to generate dropdown menus based on the values in a SharePoint list.
-              p
-                | View complete code 
-                a(href='https://gist.github.com/PatD/844b4dff0f2812b84227b3b371a577b7' target='_blank' rel='noreferrer') on GitHub
-                | .
-          details
-            summary REST Web Services driven user interface with JavaScript and HTML
-            blockquote
-              p
-                | Based on the current date, creates dropdown menus that query a REST endpoint for dynamically generated PDF reports.
-              p
-                | View complete code on 
-                a(href='https://gist.github.com/PatD/75a58a0906b87ec6324ca473ce09ba2e' target='_blank' rel='noreferrer') On Github
-                | .
-
-        article(class="my-5")
-          h2 Recent Design &amp; Development Projects
-          blockquote
-            a(href='https://www.ncdot.gov/dmv/offices-services/locate-dmv-office/' target='_blank' rel='noreferrer')
-              img(src='patrick_doran_web_dmvlocations.PNG' loading='lazy' alt='Screenshot from NCDMV Office Locations Map')
-            h4 NCDMV Office Locations Map
-            p
-              | Millions of licensed drivers across the state of North Carolina, and most will need to travel to a physical office for an ID. Hundreds of offices, but no easy way to know what was near you. This effort loads offices on a map from REST services, with relevant data, driving directions, and hours of operation. Utilizes Vue.js, Vuex, Leaflet.js, Bing Maps, REST services, geolocation, all on a public-facing SharePoint site.
-            em Role:
-            |  Developer, Designer | 
-            strong
-              a(href='https://www.ncdot.gov/dmv/offices-services/locate-dmv-office/' target='_blank' rel='noreferrer') Visit Site
-            |  | 
-            a(href='https://github.com/PatD/' target='_blank' rel='noreferrer') GitHub Repo
-          blockquote
-            a(href='https://www.ncdot.gov/projects/complete-540/Pages/planned-construction-activities.aspx' target='_blank' rel='noreferrer')
-              img(src='patrick_doran_web_complete540.PNG' loading='lazy' alt='Screenshot from Complete 540 project')
-            h4 Complete I-540 Project Map
-            p
-              | Built to inform and engage Raleigh area citizens about a large, multi-decade construction project. Utilizes Leaflet.js, Bing Maps, SharePoint Lists and GeoJSON data on a public-facing SharePoint site.
-            em Role:
-            |  Developer, Designer | 
-            strong
-              a(href='https://www.ncdot.gov/projects/complete-540/Pages/planned-construction-activities.aspx' target='_blank' rel='noreferrer') Visit Site
-            |  | 
-            a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
-          blockquote
-            a(href='https://gifsamerica.netlify.app/' target='_blank' rel='noreferrer')
-              img(src='patrick_doran_web_gifsunited.PNG' loading='lazy' alt='Screenshot from United Gifs of America')
-            h4 United GIFs of America
-            p
-              | Combined the Giphy API, vanilla JavaScript, offline storage, and SVG maps to allow the citizen to easily identify and save their state&apos;s offical GIF.
-            |             Role: Developer, Designer | 
-            strong
-              a(href='https://gifsamerica.netlify.app/' target='_blank' rel='noreferrer') Visit Site
-            |  | 
-            a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
-          blockquote
-            a(href='https://www.ncdot.gov/dmv/real-id-wizard' target='_blank' rel='noreferrer')
-              img(src='patrick_doran_web_realidwizard.PNG' loading='lazy' alt='Screenshot from NCDMV Real ID Wizard')
-            h4 North Carolina DMV REAL ID Wizard
-            p
-              | Built to help citizens navigate the requirements of getting a REAL ID driver license. Utilizes Vue.js and Vue-CLI on a public-facing SharePoint site.
-            |             Role: Front-End Developer | 
-            strong
-              a(href='https://www.ncdot.gov/dmv/real-id-wizard/' target='_blank' rel='noreferrer') Visit Site
-            |  | 
-            a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
-          blockquote
-            a(href='https://connect.ncdot.gov/letting/Pages/letting-roll-up.aspx' target='_blank' rel='noreferrer')
-              img(src='patrick_doran_web_lettingrollup.PNG' loading='lazy' alt='Screenshot from Letting Rollup project')
-            h4 NCDOT Letting Rollup Dashboard
-            p
-              | Developed to help construction companies stay up to date on the latest project lettings. Utilizes JavaScript, local storage, and open source libraries like Tabulator, Moment.js, and Office Fabric UI on a public-facing SharePoint site.
-            |             Role: Front-End Developer | 
-            strong
-              a(href='https://connect.ncdot.gov/letting/Pages/letting-roll-up.aspx' target='_blank' rel='noreferrer') Visit Site
-            |  | 
-            a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
-          hr
-          h3 Get in touch
-          ul
-            li Email is pdoran@gmail.com
-            li
-              | Code samples on 
-              a(href='https://github.com/patd' target='_blank' rel='noreferrer') GitHub
-            li
-              | Developer insights on 
-              a(href='https://twitter.com/swearpointjs' target='_blank' rel='noreferrer') Twitter
-            li
-              | Professional work on 
-              a(href='https://linkedin.com/in/patrickdoran' target='_blank' rel='noreferrer') LinkedIn
-          hr
-        
-        article(class="my-5")
-          h2 Professional History
-          p The only <strike>var</strike> const is change.
-          div(id="patrickdorantimeline")
-          hr
-
-        article(class="my-5")
-          h2 About this website
-          p PatrickDoran.com has been live on the internet since #{yearSince}. According to the Node server that generated this page, that's close to #{yearsLive} years! PatrickDoran.com is usually in handcrafted HTML and CSS, but was for a short time built in Flash. This particular iteration went live in 2020.
-          ul 
-            li The CSS styles borrow excessively from 
-              |
-              a(href='https://github.com/xz/new.css' target='_blank' rel='noreferrer') New.css
-              |  a fast, markup-driven attribute-free framework. Looks clean, loads so fast. Go ahead and run Lighthouse on it. I'll wait.
-            li This markup is built in Pug, and served via Node and Express. 
-            li It utilizes fonts already installed on your device, because who has time to wait? 
-            li A service worker is utilized in case you go offline. This is a Progessive Web App (PWA).
-
-    header(class='order-1 col-span-2 my-2')  
+          a(href='https://www.ncdot.gov/dmv/offices-services/locate-dmv-office/' target='_blank' rel='noreferrer')
+            img(src='patrick_doran_web_dmvlocations.PNG' loading='lazy' alt='Screenshot from NCDMV Office Locations Map')
+          h4 NCDMV Office Locations Map
+          p
+            | Millions of licensed drivers across the state of North Carolina, and most will need to travel to a physical office for an ID. Hundreds of offices, but no easy way to know what was near you. This effort loads offices on a map from REST services, with relevant data, driving directions, and hours of operation. Utilizes Vue.js, Vuex, Leaflet.js, Bing Maps, REST services, geolocation, all on a public-facing SharePoint site.
+          em Role:
+          |  Developer, Designer | 
+          strong
+            a(href='https://www.ncdot.gov/dmv/offices-services/locate-dmv-office/' target='_blank' rel='noreferrer') Visit Site
+          |  | 
+          a(href='https://github.com/PatD/' target='_blank' rel='noreferrer') GitHub Repo
+        blockquote
+          a(href='https://www.ncdot.gov/projects/complete-540/Pages/planned-construction-activities.aspx' target='_blank' rel='noreferrer')
+            img(src='patrick_doran_web_complete540.PNG' loading='lazy' alt='Screenshot from Complete 540 project')
+          h4 Complete I-540 Project Map
+          p
+            | Built to inform and engage Raleigh area citizens about a large, multi-decade construction project. Utilizes Leaflet.js, Bing Maps, SharePoint Lists and GeoJSON data on a public-facing SharePoint site.
+          em Role:
+          |  Developer, Designer | 
+          strong
+            a(href='https://www.ncdot.gov/projects/complete-540/Pages/planned-construction-activities.aspx' target='_blank' rel='noreferrer') Visit Site
+          |  | 
+          a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
+        blockquote
+          a(href='https://gifsamerica.netlify.app/' target='_blank' rel='noreferrer')
+            img(src='patrick_doran_web_gifsunited.PNG' loading='lazy' alt='Screenshot from United Gifs of America')
+          h4 United GIFs of America
+          p
+            | Combined the Giphy API, vanilla JavaScript, offline storage, and SVG maps to allow the citizen to easily identify and save their state&apos;s offical GIF.
+          |             Role: Developer, Designer | 
+          strong
+            a(href='https://gifsamerica.netlify.app/' target='_blank' rel='noreferrer') Visit Site
+          |  | 
+          a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
+        blockquote
+          a(href='https://www.ncdot.gov/dmv/real-id-wizard' target='_blank' rel='noreferrer')
+            img(src='patrick_doran_web_realidwizard.PNG' loading='lazy' alt='Screenshot from NCDMV Real ID Wizard')
+          h4 North Carolina DMV REAL ID Wizard
+          p
+            | Built to help citizens navigate the requirements of getting a REAL ID driver license. Utilizes Vue.js and Vue-CLI on a public-facing SharePoint site.
+          |             Role: Front-End Developer | 
+          strong
+            a(href='https://www.ncdot.gov/dmv/real-id-wizard/' target='_blank' rel='noreferrer') Visit Site
+          |  | 
+          a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
+        blockquote
+          a(href='https://connect.ncdot.gov/letting/Pages/letting-roll-up.aspx' target='_blank' rel='noreferrer')
+            img(src='patrick_doran_web_lettingrollup.PNG' loading='lazy' alt='Screenshot from Letting Rollup project')
+          h4 NCDOT Letting Rollup Dashboard
+          p
+            | Developed to help construction companies stay up to date on the latest project lettings. Utilizes JavaScript, local storage, and open source libraries like Tabulator, Moment.js, and Office Fabric UI on a public-facing SharePoint site.
+          |             Role: Front-End Developer | 
+          strong
+            a(href='https://connect.ncdot.gov/letting/Pages/letting-roll-up.aspx' target='_blank' rel='noreferrer') Visit Site
+          |  | 
+          a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
+        hr
+        h3 Get in touch
+        ul
+          li Email is pdoran@gmail.com
+          li
+            | Code samples on 
+            a(href='https://github.com/patd' target='_blank' rel='noreferrer') GitHub
+          li
+            | Developer insights on 
+            a(href='https://twitter.com/swearpointjs' target='_blank' rel='noreferrer') Twitter
+          li
+            | Professional work on 
+            a(href='https://linkedin.com/in/patrickdoran' target='_blank' rel='noreferrer') LinkedIn
+        hr
       
-      picture
-        source(srcset="patrick_doran_header_photo.webp" media="(min-width: 600px)" type="image/webp")
-        img(class="rounded-full w-36 mx-auto -hue-rotate-20 border-4 " src="patrick_doran_header_photo.jpg" title="Photo of Patrick Doran. He's a web developer. In this photo he is wearing sunglasses and smiling")
-        
-      h2 Specializing In
-      dl
-        dt &#x1F6E0;&#xFE0F; Front-End Web Development  &#x1F6E0;&#xFE0F;
-        dd
-          abbr(title='HyperText Markup Language') HTML
-        dd
-          abbr(title='Cascading Style Sheets') CSS
-        dd JavaScript
-        dd Vue
-        dd Tailwind
-        dd React
-        dd Node
-        dd Express
-        dd PHP
-        dd Python
-        dd Svelte 
-        dd 
-          abbr(title='Syntactically Awesome Style Sheets') SASS
-        dd Git
-        dd WordPress
-      dl
-        dt &#x1F5A5;&#xFE0F; User Experience Design  &#x1F5A5;&#xFE0F;
-        dd Prototyping
-        dd Responsive design
-        dd Photoshop
-        dd Illustrator
-        dd XD
-        dd Figma
-        dd Mockups
-        dd Storyboards
-      dl
-        dt &#x1F39B;&#xFE0F; Microsoft 365 &amp; SharePoint  &#x1F39B;&#xFE0F;
-        dd SharePoint 
-        dd #SPFX
-        dd Azure
-        dd Logic Apps
-        dd Teams 
-        dd Nintex
-        dd Power Automate
+      article
+        h2 Professional History
+        p The only <strike>var</strike> const is change.
+        div(id="patrickdorantimeline")
+        hr
 
+      article
+            h2 About this website
+            p PatrickDoran.com has been live on the internet since #{yearSince}. According to the Node server that generated this page, that's close to #{yearsLive} years! PatrickDoran.com is usually in handcrafted HTML and CSS, but was for a short time built in Flash. This particular iteration went live in 2020.
+            ul 
+              li The CSS styles borrow excessively from 
+                |
+                a(href='https://github.com/xz/new.css' target='_blank' rel='noreferrer') New.css
+                |  a fast, markup-driven attribute-free framework. Looks clean, loads so fast. Go ahead and run Lighthouse on it. I'll wait.
+              li This markup is built in Pug, and served via Node and Express. 
+              li It utilizes fonts already installed on your device, because who has time to wait? 
+              li A service worker is utilized in case you go offline. This is a Progessive Web App (PWA).
 
+    nav(class="col-span-2 col-start-1 row-start-1 row-span-2")  
+        picture
+          source(srcset="patrick_doran_header_photo.webp" media="(min-width: 600px)" type="image/webp")
+          img(class="rounded-full w-36 mx-auto -hue-rotate-20 border-4 " src="patrick_doran_header_photo.jpg" title="Photo of Patrick Doran. He's a web developer. In this photo he is wearing sunglasses and smiling")
           
-  footer(class='mx-20')
-    img(src='patrick_doran_web_developer.jpg' width='750' height='311' loading='lazy' alt='Photograph of Patrick Doran')
-    p(class='text-center font-serif')
-      em
-      | This is at least the 8th iteration of PatrickDoran.com.  
+        h2 Specializing In
+        dl
+          dt &#x1F6E0;&#xFE0F; Front-End Web Development  &#x1F6E0;&#xFE0F;
+          dd
+            abbr(title='HyperText Markup Language') HTML
+          dd
+            abbr(title='Cascading Style Sheets') CSS
+          dd JavaScript
+          dd Vue
+          dd Tailwind
+          dd React
+          dd Node
+          dd Express
+          dd PHP
+          dd Python
+          dd Svelte 
+          dd 
+            abbr(title='Syntactically Awesome Style Sheets') SASS
+          dd Git
+          dd WordPress
+        dl
+          dt &#x1F5A5;&#xFE0F; User Experience Design  &#x1F5A5;&#xFE0F;
+          dd Prototyping
+          dd Responsive design
+          dd Photoshop
+          dd Illustrator
+          dd XD
+          dd Figma
+          dd Mockups
+          dd Storyboards
+        dl
+          dt &#x1F39B;&#xFE0F; Microsoft 365 &amp; SharePoint  &#x1F39B;&#xFE0F;
+          dd SharePoint 
+          dd #SPFX
+          dd Azure
+          dd Logic Apps
+          dd Teams 
+          dd Nintex
+          dd Power Automate
+            
+    footer(class="col-start-4 col-span-9") 
+      img(src='patrick_doran_web_developer.jpg' width='750' height='311' loading='lazy' alt='Photograph of Patrick Doran')
+      p(class='text-center font-serif')
+        em
+        | This is at least the 8th iteration of PatrickDoran.com.  
 
 
-  script.
-    // if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
-  script(defer src='patrickdoran_svelte_bundle.js')
-  script(defer src='patrickdoran_react_timeline.js')
+script.
+// if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
+script(defer src='patrickdoran_svelte_bundle.js')
+script(defer src='patrickdoran_react_timeline.js')
