@@ -2,7 +2,7 @@ doctype html
 // View Source ❤️ forever. 
 // Minified markup flies fastest, but it is hard to read through. 
 // You can see the unminified code on https://github.com/patd
-html(lang="en" class="bg-amber-100 border-t-4 border-emerald-700")
+html(lang="en")
   head
     include headstuff
 
@@ -25,8 +25,8 @@ html(lang="en" class="bg-amber-100 border-t-4 border-emerald-700")
       <path d="M500,10C229.4,10,10,229.4,10,500c0,270.6,219.4,490,490,490c270.6,0,490-219.4,490-490C990,229.4,770.6,10,500,10z M635,644.4c-102.2,0-137.7-46.4-156.6-104.2l-18.9-59.6c-14.2-43.5-25.6-74.9-77.6-74.9c-36,0-83,23.6-83,96.9c0,57.2,39.3,92.9,80,92.9c34.6,0,55.3-19.4,66.1-29.1l18.1,51.6c-12.3,8.9-37.5,26.4-87.2,26.4c-68.7,0-134-48.8-134-139.4c0-94.1,68-149.5,138.1-149.5c78.6,0,107.9,28.6,132.7,106l19.5,59.5c14.2,43.5,44.1,75.1,103.8,75.1c40.2,0,61.5-8.9,61.5-31c0-17.3-10-29.8-40.2-36.9l-40.2-9.5c-49-11.9-68.5-37.5-68.5-78c0-64.9,52-85.2,105.2-85.2c60.3,0,96.9,22,101.6,75.6l-59.1,7.1c-2.4-25.6-17.7-36.3-46.1-36.3c-26,0-41.9,11.9-41.9,32.2c0,17.9,7.7,28.6,33.7,34.6l37.8,8.3c50.8,11.9,78,36.9,78,85.2C757.9,621.8,708.3,644.4,635,644.4z"/>
       </svg>
 
-  div(class="grid grid-cols-12 gap-4 mx-auto px-12 auto-rows-max")
-    header(class="col-start-4 col-span-9")
+  div(id="wrap")
+    header
       h1
         span Patrick Doran 
         br
@@ -34,9 +34,7 @@ html(lang="en" class="bg-amber-100 border-t-4 border-emerald-700")
         span(class='text-7xl') &amp; 
         | Interaction Designer
         sup *
-        
-      em Rolling trackballs near Raleigh, North Carolina 
-        span 🖲 
+      
         
       p Patrick Doran designs fast user interfaces, codes modern JavaScript applications, sketches wireframes, and obsesses about usability and performance. 
       p Lately, Patrick has spent a lot of time with Vue.js and SharePoint development, design and branding.
@@ -48,7 +46,7 @@ html(lang="en" class="bg-amber-100 border-t-4 border-emerald-700")
             time(datetime='1998-01') 1998 
               span &#x1F4BE; 
 
-    main(class="col-start-4 col-span-9")    
+    main(role="main")    
           
       article
         h2 Speaking &amp; Writing
@@ -186,20 +184,7 @@ html(lang="en" class="bg-amber-100 border-t-4 border-emerald-700")
             a(href='https://connect.ncdot.gov/letting/Pages/letting-roll-up.aspx' target='_blank' rel='noreferrer') Visit Site
           |  | 
           a(href='https://github.com/PatD/United-GIFs-of-America' target='_blank' rel='noreferrer') GitHub Repo
-        hr
-        h3 Get in touch
-        ul
-          li Email is pdoran@gmail.com
-          li
-            | Code samples on 
-            a(href='https://github.com/patd' target='_blank' rel='noreferrer') GitHub
-          li
-            | Developer insights on 
-            a(href='https://twitter.com/swearpointjs' target='_blank' rel='noreferrer') Twitter
-          li
-            | Professional work on 
-            a(href='https://linkedin.com/in/patrickdoran' target='_blank' rel='noreferrer') LinkedIn
-        hr
+
       
       article
         h2 Professional History
@@ -219,7 +204,7 @@ html(lang="en" class="bg-amber-100 border-t-4 border-emerald-700")
               li It utilizes fonts already installed on your device, because who has time to wait? 
               li A service worker is utilized in case you go offline. This is a Progessive Web App (PWA).
 
-    nav(class="col-span-2 col-start-1 row-start-1 row-span-2")  
+    nav
         picture
           source(srcset="patrick_doran_header_photo.webp" media="(min-width: 600px)" type="image/webp")
           img(class="rounded-full w-36 mx-auto -hue-rotate-20 border-4 " src="patrick_doran_header_photo.jpg" title="Photo of Patrick Doran. He's a web developer. In this photo he is wearing sunglasses and smiling")
@@ -263,8 +248,11 @@ html(lang="en" class="bg-amber-100 border-t-4 border-emerald-700")
           dd Teams 
           dd Nintex
           dd Power Automate
+
+        em Rolling trackballs near Raleigh, North Carolina 
+          span 🖲 
             
-    footer(class="col-start-4 col-span-9") 
+    footer
       img(src='patrick_doran_web_developer.jpg' width='750' height='311' loading='lazy' alt='Photograph of Patrick Doran')
       p(class='text-center font-serif')
         em
