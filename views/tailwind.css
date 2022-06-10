@@ -12,9 +12,103 @@
   }
 
 body{
-    @apply bg-orange-50 border-t-8 border-t-cyan-900
+    @apply bg-orange-50 border-t-8 border-t-cyan-900 px-5 py-10
 }
 
+aside{
+    @apply flex flex-row flex-nowrap justify-center gap-8 mb-5
+}
+
+    aside svg {
+        @apply mb-4 opacity-40 hover:opacity-70 w-8 h-8 hover:rotate-6 transition
+    }
+
+    aside span {
+        @apply hidden
+    }
+
+
+#wrap{
+    @apply grid grid-flow-row 
+}
+
+
+
+h1{
+    @apply text-emerald-700 mb-5 text-center text-4xl font-leaguespartan drop-shadow-md shadow-emerald-800
+}
+
+h1 span {
+    @apply text-emerald-800 
+}
+
+h1 strong{
+    @apply text-pink-600 text-xl align-super leading-4
+}
+
+
+header {
+    @apply mb-10
+}
+
+    header picture{
+        @apply mb-5 block row-start-2
+    }
+
+    header picture img {
+        @apply rounded-full w-36 mx-auto border-4 border-emerald-600 hover:-rotate-12 transition ease-in-out
+    }
+
+    header p {
+        @apply text-slate-900 mb-5
+    }
+
+    header blockquote {
+        @apply text-center font-serif text-slate-600
+    }
+
+    header blockquote i {
+        @apply text-pink-600 font-bold text-lg leading-3
+    }
+
+    header blockquote time {
+        @apply font-bold hover:underline
+    }
+
+    header blockquote time span {
+        @apply font-normal not-italic
+    }
+
+
+nav{
+    @apply row-start-2
+}
+
+    nav h2{
+        @apply mt-10 text-center text-2xl
+    }
+
+    nav em{
+        @apply text-center block 
+    }
+
+    nav em span{
+        @apply not-italic
+    }
+
+    nav dl {
+        @apply my-5 mb-7 flex flex-wrap justify-center 
+    }
+
+    nav dt{
+        @apply font-extrabold text-center mb-1 text-emerald-700 w-11/12
+    }
+
+    nav dd{
+        @apply text-center font-mono inline-block align-middle px-2 py-0.5 my-1 mx-auto rounded-md bg-green-50
+    }
+
+/*
 #wrap{
     @apply grid grid-cols-12 gap-x-12 mx-auto px-24 auto-rows-max pt-16
 }
@@ -40,64 +134,16 @@ article h2{
     @apply text-gray-200 shadow-lg leading-tight
 }
 
-header blockquote {
-    @apply text-right font-serif pt-7
-}
 
-header blockquote i {
-    @apply text-pink-600 font-bold text-lg leading-9
-}
-
-header blockquote time {
-    @apply font-bold
-}
-
-header blockquote time span {
-    @apply font-normal not-italic
-}
+*/
 
 
 
-/* social media icons */
-aside{
-    @apply fixed top-7 right-7
-}
 
-    aside svg {
-        @apply mb-4 opacity-40 hover:opacity-60
-    }
+/*
 
-    aside span {
-        @apply hidden
-    }
 
-nav {
-    @apply col-span-3 row-start-1 row-span-3
-}
-
-    nav h2{
-        @apply my-5 text-center
-    }
-
-    nav em{
-        @apply text-center block 
-    }
-
-    nav em span{
-        @apply not-italic
-    }
-
-    nav dl {
-        @apply my-5 mb-7 flex flex-wrap justify-center space-x-2
-    }
-
-    nav dt{
-        @apply font-extrabold text-center mb-1 text-emerald-700 block
-    }
-
-    nav dd{
-        @apply text-center font-mono inline-block align-middle px-2 py-0.5 my-1 mx-auto rounded-md bg-green-50
-    }
+   
 
 
 
@@ -105,17 +151,7 @@ nav {
 
 
 
-h1{
-    @apply text-6xl text-emerald-700 mb-10 font-leaguespartan leading-[1.15] drop-shadow-md shadow-emerald-800
-}
 
-h1 span {
-    @apply text-emerald-800 text-7xl
-}
-
-h1 sup{
-    @apply text-pink-600 text-4xl leading-10
-}
 
 
 
@@ -134,7 +170,7 @@ main p {
 
 
 
-/* Card component for recent speaking/writing */
+
 
 #svelteComponent{
     @apply grid grid-cols-9 text-center space-x-4 space-y-4
@@ -162,12 +198,24 @@ main p {
 
 
 
-
-details{
-    @apply bg-slate-50 border border-gray-900 cursor-pointer hover:translate-x-1
+#recentExamples{
+    @apply grid gap-6 grid-cols-6
 }
 
-summary{
+#recentExamples h2{
+    @apply col-span-6 row-span-1
+}
+
+#recentExamples details{
+    @apply bg-slate-50 cursor-pointer col-span-2 shadow-lg
+}
+
+#recentExamples details[open] summary{
+    @apply bg-teal-400
+}
+
+
+#recentExamples summary{
     @apply flex items-center p-10
 }
 
@@ -175,8 +223,7 @@ summary{
 
 
 
-
-
+*/
 
 /* Timeline JS styles */
 .timeline{-webkit-box-sizing:border-box;box-sizing:border-box;position:relative}
@@ -199,3 +246,4 @@ summary{
 .timeline__content h2{font-size:1.25rem;font-weight:700;margin:0 0 .625rem}
 .timeline__content p{font-size:.9375rem;line-height:1.5;margin-bottom:10px}
 .timeline--horizontal{font-size:0;padding:0 3.125rem;overflow:hidden;white-space:nowrap}.timeline--horizontal .timeline-divider{background-color:#ddd;display:block;height:4px;left:40px;position:absolute;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);right:40px;z-index:1}.timeline--horizontal .timeline__items{-webkit-transition:all .8s;-o-transition:all .8s;transition:all .8s;will-change:transform}.timeline--horizontal .timeline__item{display:inline-block;left:0;padding:0 0 2.5rem;position:relative;-webkit-transition:none;-o-transition:none;transition:none;vertical-align:top;white-space:normal}.timeline--horizontal .timeline__item:after{left:50%;right:auto;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);top:100%}.timeline--horizontal .timeline__item .timeline__item__inner{display:table;height:100%;width:100%}.timeline--horizontal .timeline__item .timeline__content__wrap{display:table-cell;margin:0;padding:0;vertical-align:bottom}.timeline--horizontal .timeline__item .timeline__content:before{border-left:12px solid transparent;border-right:12px solid transparent;border-top:12px solid #ccc;left:50%;right:auto;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);top:100%}.timeline--horizontal .timeline__item .timeline__content:after{border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #fff;left:50%;right:auto;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);top:100%}.timeline--horizontal .timeline__item--bottom{padding:2.5rem 0 0}.timeline--horizontal .timeline__item--bottom:after{top:0}.timeline--horizontal .timeline__item--bottom .timeline__content__wrap{vertical-align:top}.timeline--horizontal .timeline__item--bottom .timeline__content:before{border-bottom:12px solid #ccc;border-left:12px solid transparent;border-right:12px solid transparent;border-top:none;bottom:100%;top:auto}.timeline--horizontal .timeline__item--bottom .timeline__content:after{border-bottom:10px solid #fff;border-left:10px solid transparent;border-right:10px solid transparent;border-top:none;bottom:100%;top:auto}.timeline-nav-button{background-color:#fff;border:2px solid #ddd;border-radius:50px;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-box-shadow:none;box-shadow:none;cursor:pointer;display:block;height:40px;outline:0;position:absolute;text-indent:-9999px;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);top:50%;width:40px;z-index:10}.timeline-nav-button:disabled{opacity:.5;pointer-events:none}.timeline-nav-button:before{background-position:center center;background-repeat:no-repeat;content:'';display:block;height:14px;left:50%;position:absolute;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);top:50%;width:8px}.timeline-nav-button--prev{left:0}.timeline-nav-button--prev:before{background-image:url(../images/arrow-left.svg)}.timeline-nav-button--next{right:0}.timeline-nav-button--next:before{background-image:url(../images/arrow-right.svg)}.timeline--mobile{padding:0}.timeline--mobile:before{left:10px!important;margin:0!important}.timeline--mobile .timeline__item{left:0;padding-left:40px;padding-right:0;width:100%}.timeline--mobile .timeline__item:after{left:2px;margin:0}.timeline--mobile .timeline__item .timeline__content:before{left:-12px;border-bottom:12px solid transparent;border-right:12px solid #ccc;border-left:none;border-top:12px solid transparent}.timeline--mobile .timeline__item .timeline__content:after{left:-10px;border-bottom:10px solid transparent;border-right:10px solid #fff;border-left:none;border-top:10px solid transparent}@-webkit-keyframes fadeIn{0%{opacity:0;top:70px}100%{opacity:1;top:0}}@keyframes fadeIn{0%{opacity:0;top:70px}100%{opacity:1;top:0}}@-webkit-keyframes liftUp{0%{top:0}100%{top:-15px}}@keyframes liftUp{0%{top:0}100%{top:-15px}}
+
