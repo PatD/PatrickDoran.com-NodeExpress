@@ -12,7 +12,11 @@
   }
 
 body{
-    @apply bg-orange-50 border-t-8 border-t-cyan-900 px-5 py-10
+    @apply bg-orange-50 border-t-8 border-t-cyan-900 py-10
+}
+
+header{
+    @apply px-10
 }
 
 aside{
@@ -38,14 +42,17 @@ h1{
     @apply text-emerald-700 mb-5 text-center text-4xl font-leaguespartan drop-shadow-md shadow-emerald-800
 }
 
-h1 span {
-    @apply text-emerald-800 
-}
+    h1 span {
+        @apply text-emerald-800 
+    }
 
-h1 strong{
-    @apply text-pink-600 text-xl align-super leading-4
-}
+    h1 strong{
+        @apply text-pink-600 text-xl align-super leading-4
+    }
 
+h2{
+    @apply text-emerald-700 font-leaguespartan drop-shadow-md shadow-emerald-800   
+}
 
 header {
     @apply mb-10
@@ -81,7 +88,7 @@ header {
 
 
 nav{
-    @apply row-start-2
+    @apply row-start-4 /* row-span-3 */ px-5
 }
 
     nav h2{
@@ -105,7 +112,43 @@ nav{
     }
 
     nav dd{
-        @apply text-center font-mono inline-block align-middle px-2 py-0.5 my-1 mx-auto rounded-md bg-green-50
+        @apply text-center font-mono inline-block align-middle px-2 py-0.5 my-1 mx-auto rounded-md bg-gradient-to-tr from-white via-emerald-50 to-emerald-100 shadow-md
+    }
+
+
+article{
+    @apply bg-cyan-900 py-5
+}
+
+article h2{
+    @apply text-white p-5
+}
+
+#svelteComponent{
+    @apply snap-x my-0 mt-5 snap-mandatory w-screen flex overflow-scroll flex-row 
+}
+
+    #svelteComponent li {
+        @apply col-span-3 snap-center p-5 bg-slate-50 rounded-lg border shadow-lg shadow-slate-800 ml-5 mb-5 
+    }
+
+    #svelteComponent li a {
+        @apply w-64 block
+    }
+    #svelteComponent li a header {
+        @apply text-3xl rounded-full shadow-md border-2 block px-4 py-3 m-auto text-center max-w-fit
+    }
+
+    #svelteComponent li a h3 {
+        @apply font-leaguespartan text-green-700 text-sm py-2 text-center
+    }
+
+    #svelteComponent li a span {
+        @apply underline underline-offset-2 block text-center
+    }
+
+    #svelteComponent li time {
+        @apply block text-gray-300 text-2xl font-serif text-center
     }
 
 /*
@@ -151,50 +194,6 @@ article h2{
 
 
 
-
-
-
-
-h2{
-    @apply text-4xl text-emerald-700 font-leaguespartan pb-9 drop-shadow-md shadow-emerald-800   
-}
-
-
-
-main p {
-    @apply mb-5 text-lg
-}
-
-
-
-
-
-
-
-
-#svelteComponent{
-    @apply grid grid-cols-9 text-center space-x-4 space-y-4
-}
-
-#svelteComponent li {
-    @apply  p-5 col-span-3 bg-slate-50 rounded-lg border shadow-md origin-bottom -rotate-2 transition hover:rotate-0
-}
-
-#svelteComponent li a header {
-    @apply text-3xl rounded-full shadow-md border-2 inline-block px-4 py-3 
-}
-
-#svelteComponent li a h3 {
-    @apply font-leaguespartan text-green-700 text-sm py-2
-}
-
-#svelteComponent li a span {
-    @apply underline underline-offset-2
-}
-
-#svelteComponent li time {
-     @apply block text-gray-300 text-2xl font-serif 
-}
 
 
 
