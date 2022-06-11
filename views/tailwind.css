@@ -12,11 +12,7 @@
   }
 
 body{
-    @apply bg-orange-50 border-t-8 border-t-cyan-900 py-10
-}
-
-header{
-    @apply px-10
+    @apply bg-amber-100 border-t-8 border-t-cyan-900 py-10
 }
 
 aside{
@@ -36,6 +32,9 @@ aside{
     @apply grid grid-flow-row 
 }
 
+main{
+    @apply grid grid-flow-row 
+}
 
 
 h1{
@@ -55,11 +54,11 @@ h2{
 }
 
 header {
-    @apply mb-10
+    @apply mb-10 px-10
 }
 
     header picture{
-        @apply mb-5 block row-start-2
+        @apply mb-5 block 
     }
 
     header picture img {
@@ -88,7 +87,7 @@ header {
 
 
 nav{
-    @apply row-start-4 /* row-span-3 */ px-5
+    @apply row-start-3 px-5
 }
 
     nav h2{
@@ -121,11 +120,11 @@ article{
 }
 
 article h2{
-    @apply text-white p-5
+    @apply text-white p-5 text-xl
 }
 
 #svelteComponent{
-    @apply snap-x my-0 mt-5 snap-mandatory w-screen flex overflow-scroll flex-row 
+    @apply snap-x my-0 mt-5 mb-5 snap-mandatory w-screen h-80 flex overflow-scroll flex-row gap-x-2
 }
 
     #svelteComponent li {
@@ -140,16 +139,36 @@ article h2{
     }
 
     #svelteComponent li a h3 {
-        @apply font-leaguespartan text-green-700 text-sm py-2 text-center
+        @apply font-leaguespartan text-green-700 text-sm py-5 text-center
     }
 
     #svelteComponent li a span {
-        @apply underline underline-offset-2 block text-center
+        @apply underline underline-offset-2 block text-center hover:no-underline
     }
 
     #svelteComponent li time {
-        @apply block text-gray-300 text-2xl font-serif text-center
+        @apply block text-gray-300 text-3xl font-serif text-center mt-5
     }
+
+
+
+
+#recentExamples{
+    @apply bg-amber-100 row-start-3
+}
+
+#recentExamples h2{
+    @apply text-emerald-700 
+}
+
+#projects{
+    @apply bg-stone-300 
+}
+
+#projects h2{
+    @apply text-black row-start-1
+}
+
 
 /*
 #wrap{
@@ -225,6 +244,7 @@ article h2{
 */
 
 /* Timeline JS styles */
+.timeline{display: none;}
 .timeline{-webkit-box-sizing:border-box;box-sizing:border-box;position:relative}
 .timeline *,.timeline :after,.timeline :before{-webkit-box-sizing:inherit;box-sizing:inherit}
 .timeline:not(.timeline--horizontal):before{background-color:#ddd;bottom:0;content:'';left:50%;margin-left:-2px;position:absolute;top:0;width:4px;z-index:1}

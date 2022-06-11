@@ -6,6 +6,11 @@ html(lang="en")
   head
     include headstuff
 
+
+  each n in projects
+    p
+      span= n.project
+      
   aside 
     a(href="https://github.com/patd" target="_blank")
       span Patrick Doran's Github repos
@@ -59,7 +64,7 @@ html(lang="en")
         ul(id="svelteComponent")
           
       article(id="recentExamples")
-        h2 Recent Coding Examples
+        h2 More Coding Examples
         
         details
           summary Azure Cognitive Services handwriting recognition with JavaScript
@@ -131,8 +136,8 @@ html(lang="en")
               a(href='https://gist.github.com/PatD/75a58a0906b87ec6324ca473ce09ba2e' target='_blank' rel='noreferrer') On Github
               | .
 
-      article
-        h2 Recent Design &amp; Development Projects
+      article(id="projects")
+        h2 Recent Design &amp; Development
         blockquote
           a(href='https://www.ncdot.gov/dmv/offices-services/locate-dmv-office/' target='_blank' rel='noreferrer')
             img(src='patrick_doran_web_dmvlocations.PNG' loading='lazy' alt='Screenshot from NCDMV Office Locations Map')

@@ -3,11 +3,37 @@
 // Required External Modules
 const express = require("express");
 const path = require("path");
+const fs = require('fs');
 
 // App Variables
 
 const app = express();
 const port = process.env.PORT || "8000";
+
+
+// Get JSON file for projects
+
+var projects;
+fs.readFile('projects.json', 'utf8', (err, data) => {
+
+    if (err) {
+        console.log(`Error reading file from disk: ${err}`);
+    } else {
+
+        // parse JSON string to JSON object
+        const loadedProjects = JSON.parse(data);
+
+        projects = loadedProjects
+    }
+});
+
+
+
+
+
+
+
+
 
 
 
@@ -39,7 +65,8 @@ app.get("/", (req, res) => {
     res.render("home", { 
         title: "Patrick Doran is a Developer & Interaction Designer in North Carolina.", 
         yearSince: yearSince,
-        yearsLive: yearToday - yearSince // Returns the number of years the site has been live.
+        yearsLive: yearToday - yearSince, // Returns the number of years the site has been live.
+        projects: projects
       });
  });
 
