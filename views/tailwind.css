@@ -15,15 +15,15 @@ body{
     @apply bg-amber-100 border-t-8 border-t-cyan-900 py-10
 }
 
-aside{
+menu{
     @apply flex flex-row flex-nowrap justify-center gap-8 mb-5
 }
 
-    aside svg {
+    menu svg {
         @apply mb-4 opacity-40 hover:opacity-70 w-8 h-8 hover:rotate-6 transition
     }
 
-    aside span {
+    menu span {
         @apply hidden
     }
 
@@ -161,14 +161,40 @@ article h2{
     @apply text-emerald-700 
 }
 
+
+
 #projects{
-    @apply bg-stone-300 
+    @apply bg-amber-100
 }
 
 #projects h2{
-    @apply text-black row-start-1
+    @apply row-start-1 text-emerald-700 
 }
 
+#projects div{
+    @apply  m-5 p-6 shadow-lg bg-cyan-900 rounded-lg border
+}
+
+
+#projects h3{
+    @apply text-white font-leaguespartan drop-shadow-md my-3
+}
+
+#projects img{
+    @apply border-2 border-yellow-100
+}
+
+#projects p{
+    @apply hidden sm:block text-slate-100
+}
+
+#projects em{
+    @apply text-slate-100 block
+}
+
+#projects a{
+    @apply inline-block rounded-full border border-white p-4 mt-5 shadow-lg text-white mr-5
+}
 
 /*
 #wrap{
