@@ -32,9 +32,11 @@ html(lang="en")
       h1
         span Patrick Doran 
         br
-        | is a Front-End Developer 
+        | is a front-end developer 
         mark &amp; 
-        | Interaction Designer
+        | interaction designer 
+        i 
+        | working in North Carolina
         strong *
       
       picture
@@ -47,8 +49,8 @@ html(lang="en")
       
       blockquote
         i * 
-        em Patrick has been building and designing on the web since
-          a(title='Follow this link for citation reference.' href='patrick_doran_work_history.jpg')  
+        em Building and designing on the web since
+          a(title='Follow this link for citation reference.' target='_blank' href='patrick_doran_work_history.jpg')  
             time(datetime='1998-01') 1998
             span &nbsp; &#x1F4BE; 
 
@@ -56,7 +58,7 @@ html(lang="en")
 
     main   
           
-      article
+      article(id="speakingWriting")
         h2 Speaking &amp; Writing
         ul(id="svelteComponent")
           
@@ -133,26 +135,27 @@ html(lang="en")
               a(href='https://gist.github.com/PatD/75a58a0906b87ec6324ca473ce09ba2e' target='_blank' rel='noreferrer') On Github
               | .
 
+      // Express loads recent project data from projects.json
+      // then they're rendered via Pug when the page is generated 
+        
       article(id="projects")
         h2 Recent Design &amp; Development
+        section
+          each n in projects
+            div
+              img(loading="lazy" src=n.Image alt="Screenshot from the " + n.Title)
+              h3= n.Title
+            
+              em Role: 
+                cite= n.Role
+              p= n.Description
 
-        // Express loads recent project data from projects.json
-        // then they're rendered via Pug when the page is generated 
-        each n in projects
-          div
-            img(loading="lazy" src=n.Image alt="Screenshot from the " + n.Title)
-            h3= n.Title
-           
-            em Role: 
-              cite= n.Role
-            p= n.Description
+              a(href=n.Link target="_blank")
+                | Link 
 
-            a(href=n.Link target="_blank")
-              | Link 
-
-            span
-              a(href=n.Repo target="_blank")
-                | Repo
+              span
+                a(href=n.Repo target="_blank")
+                  | Repo
 
 
 
@@ -217,8 +220,8 @@ html(lang="en")
           dd Nintex
           dd Power Automate
 
-        em Rolling trackballs near Raleigh, North Carolina 
-          span 🖲 
+        //- em Rolling trackballs near Raleigh, North Carolina 
+          //- span 🖲 
             
     footer
       img(src='patrick_doran_web_developer.jpg' width='750' height='311' loading='lazy' alt='Photograph of Patrick Doran')

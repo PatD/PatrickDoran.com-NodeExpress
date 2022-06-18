@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    @apply bg-amber-100 border-t-8 border-t-cyan-900 py-10 
+    @apply bg-gradient-to-tr pt-2 from-cyan-900 via-cyan-200 to-cyan-900
 }
 
 menu{
@@ -57,10 +57,11 @@ h2{
 }
 
 header {
-    @apply mb-10 px-10 lg:grid lg:grid-cols-12 lg:px-0
+    @apply bg-gradient-to-r from-amber-100 via-amber-50 to-amber-100 mb-2 px-10 lg:grid lg:grid-cols-12 lg:px-0 lg:py-20 lg:mx-auto
 }
+    
     header h1{
-        @apply  lg:row-span-1 lg:col-start-4 lg:col-span-6 lg:text-left
+        @apply  lg:row-span-1 lg:col-start-4 lg:col-span-8 lg:text-left
     }
 
     header mark{
@@ -95,7 +96,7 @@ header {
         @apply font-bold hover:underline
     }
 
-    header blockquote time span {
+    header blockquote span {
         @apply font-normal not-italic
     }
 
@@ -103,11 +104,11 @@ header {
 
 
 nav{
-    @apply row-start-3 px-5
+    @apply row-start-3 px-5 lg:row-start-5 lg:grid lg:grid-flow-col lg:max-w-screen-lg lg:mx-auto lg:gap-10
 }
 
     nav h2{
-        @apply mt-10 text-center text-2xl
+        @apply mt-10 text-center text-2xl lg:col-span-3 lg:row-start-1
     }
 
     nav em{
@@ -119,7 +120,7 @@ nav{
     }
 
     nav dl {
-        @apply my-5 mb-7 flex flex-wrap justify-center 
+        @apply my-5 mb-7 flex flex-wrap justify-center lg:col-span-1 lg:row-start-2
     }
 
     nav dt{
@@ -131,46 +132,47 @@ nav{
     }
 
 
-article{
-    @apply bg-cyan-900 py-5
+article#speakingWriting{
+    @apply bg-cyan-900 mb-2
 }
 
 article h2{
     @apply text-white p-5 text-xl
 }
 
+/* Speaking & Writing */
 #svelteComponent{
-    @apply snap-x my-0 mt-5 mb-5 snap-mandatory w-screen h-80 flex overflow-scroll flex-row gap-x-2
+    @apply h-auto snap-x my-0 mt-2 mb-5 snap-mandatory w-screen flex overflow-scroll flex-row gap-x-1
 }
 
     #svelteComponent li {
-        @apply col-span-3 snap-center p-5 bg-slate-50 rounded-lg border shadow-lg shadow-slate-800 ml-5 mb-5 
+        @apply col-span-3 snap-center p-3 bg-slate-50 rounded-lg border shadow-lg shadow-slate-800 ml-5 mb-5
     }
 
     #svelteComponent li a {
-        @apply w-64 block
+        @apply w-64 grid grid-flow-row row-span-3 col-span-5
     }
     #svelteComponent li a header {
-        @apply text-3xl rounded-full shadow-md border-2 block px-4 py-3 m-auto text-center max-w-fit
+        @apply col-start-1 col-end-2 bg-white text-3xl rounded-full shadow-md border-2 block px-4 py-3 m-auto
     }
 
     #svelteComponent li a h3 {
-        @apply font-leaguespartan text-green-700 text-sm py-5 text-center
+        @apply col-start-3 col-end-5 font-leaguespartan text-green-700 text-sm py-4 pl-3
     }
 
     #svelteComponent li a span {
-        @apply underline underline-offset-2 block text-center hover:no-underline
+        @apply mt-5 col-start-1 col-span-5 row-start-2 underline underline-offset-2 block text-center hover:no-underline
     }
 
     #svelteComponent li time {
-        @apply block text-gray-300 text-3xl font-serif text-center mt-5
+        @apply block col-start-1 col-span-5 row-start-3 text-gray-300 text-3xl font-serif text-center mt-5
     }
 
 
 
 
 #recentExamples{
-    @apply bg-amber-100 row-start-3
+    @apply bg-gradient-to-r from-amber-100 via-amber-50 to-amber-100 row-start-3
 }
 
 #recentExamples h2{
@@ -180,17 +182,20 @@ article h2{
 
 
 #projects{
-    @apply bg-amber-100
+    @apply bg-amber-100 
 }
 
 #projects h2{
-    @apply row-start-1 text-emerald-700 
+    @apply text-emerald-700 lg:mx-auto lg:container
+}
+
+#projects section{
+ @apply container mx-auto lg:grid lg:grid-flow-col lg:gap-5  
 }
 
 #projects div{
-    @apply  m-5 p-6 shadow-lg bg-cyan-900 rounded-lg border
+    @apply  m-5 p-6 shadow-lg bg-cyan-900 rounded-lg border lg:col-span-3
 }
-
 
 #projects h3{
     @apply text-white font-leaguespartan drop-shadow-md my-3
