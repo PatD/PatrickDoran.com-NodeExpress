@@ -73,7 +73,7 @@ header {
     }
 
     header picture{
-        @apply mb-5 block lg:row-span-2 lg:col-start-1 lg:row-start-1 lg:col-span-3 
+        @apply mb-5 block lg:row-span-2 lg:col-start-1 lg:row-start-1 lg:col-span-3
     }
 
     header picture img {
@@ -132,28 +132,35 @@ nav{
     }
 
 
+article#history{
+    @apply row-start-1 bg-cyan-900 mb-2
+}
+
+
+
 article#speakingWriting{
     @apply bg-cyan-900 mb-2
 }
 
 article h2{
-    @apply text-white p-5 text-xl
+    @apply text-white p-5 text-3xl  lg:mx-auto lg:container
 }
 
 /* Speaking & Writing */
 #svelteComponent{
-    @apply h-auto snap-x my-0 mt-2 mb-5 snap-mandatory w-screen flex overflow-scroll flex-row gap-x-1
+    @apply h-auto snap-x my-0 mt-2 mb-5 lg:pl-10 xl:pl-14 snap-mandatory w-screen flex overflow-scroll flex-row gap-x-1
 }
 
     #svelteComponent li {
         @apply col-span-3 snap-center p-3 bg-slate-50 rounded-lg border shadow-lg shadow-slate-800 ml-5 mb-5
     }
 
+
     #svelteComponent li a {
         @apply w-64 grid grid-flow-row row-span-3 col-span-5
     }
     #svelteComponent li a header {
-        @apply col-start-1 col-end-2 bg-white text-3xl rounded-full shadow-md border-2 block px-4 py-3 m-auto
+        @apply bg-none col-start-1 col-end-2 bg-white text-3xl rounded-full shadow-md border-2 block px-4 py-3 m-auto
     }
 
     #svelteComponent li a h3 {
@@ -182,19 +189,19 @@ article h2{
 
 
 #projects{
-    @apply bg-amber-100 
+    @apply bg-gradient-to-r from-amber-100 via-amber-50 to-amber-100
 }
 
 #projects h2{
-    @apply text-emerald-700 lg:mx-auto lg:container
+    @apply text-emerald-700 lg:mx-auto lg:container mt-5 text-3xl
 }
 
 #projects section{
- @apply container mx-auto w-full max-w-5xl p-5 pb-10 mb-10 gap-5 columns-3 space-y-5 break-inside-avoid
+ @apply container mx-auto w-full mb-10 gap-4 columns-3 xl:columns-4 space-y-4 break-inside-avoid
 }
 
 #projects div{
-    @apply  m-5 p-6 shadow-lg bg-cyan-900 rounded-lg border break-inside-avoid
+    @apply p-6 shadow-lg bg-cyan-900 rounded-lg border break-inside-avoid
 }
 
 #projects h3{
