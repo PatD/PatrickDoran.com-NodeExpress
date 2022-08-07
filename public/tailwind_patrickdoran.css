@@ -572,9 +572,7 @@ html {
 }
 
 body{
-  /* https://hypercolor.dev/mesh */
-  background-color: rgb(24, 24, 27);
-  background-image: radial-gradient(at 18% 65%, rgb(229, 229, 229) 0, transparent 82%), radial-gradient(at 45% 80%, rgb(165, 243, 252) 0, transparent 74%), radial-gradient(at 61% 67%, rgb(226, 232, 240) 0, transparent 55%), radial-gradient(at 47% 60%, rgb(30, 64, 175) 0, transparent 60%), radial-gradient(at 65% 20%, rgb(163, 163, 163) 0, transparent 62%), radial-gradient(at 88% 81%, rgb(244, 244, 245) 0, transparent 40%);
+  /* @apply max-w-screen-2xl mx-auto */
 }
 
 #scrollToTop {
@@ -700,16 +698,22 @@ nav a:hover {
 }
 
 main {
-  margin-left: 15rem;
   min-height: 100vh;
 }
 
 header {
+  /* https://hypercolor.dev/mesh */
+  background-color: rgb(24, 24, 27);
+  background-image: radial-gradient(at 18% 65%, rgb(229, 229, 229) 0, transparent 82%), radial-gradient(at 45% 80%, rgb(165, 243, 252) 0, transparent 74%), radial-gradient(at 61% 67%, rgb(226, 232, 240) 0, transparent 55%), radial-gradient(at 47% 60%, rgb(30, 64, 175) 0, transparent 60%), radial-gradient(at 65% 20%, rgb(163, 163, 163) 0, transparent 62%), radial-gradient(at 88% 81%, rgb(244, 244, 245) 0, transparent 40%);
+  display: grid;
+  grid-auto-flow: row;
   padding-top: 6rem;
-  padding-bottom: 15rem;
+  padding-bottom: 6rem;
+  padding-left: 16rem
 }
 
 header h1 {
+  grid-column: span 2 / span 2;
   margin-bottom: 1.5rem;
   max-width: 1024px;
   padding-right: 9rem;
@@ -725,6 +729,11 @@ header h1 {
 header h1 span {
   --tw-text-opacity: 1;
   color: rgb(219 234 254 / var(--tw-text-opacity));
+}
+
+header picture {
+  grid-row: span 2 / span 2;
+  vertical-align: middle;
 }
 
 header picture img {
@@ -752,9 +761,10 @@ header picture img:hover {
 }
 
 header p {
+  grid-column-start: 2;
   margin-bottom: 1.25rem;
   max-width: 1024px;
-  padding-right: 8rem;
+  padding-right: 16rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   line-height: 1.25;
@@ -762,6 +772,34 @@ header p {
 
 article {
   min-height: 100vh;
+  padding-left: 16rem;
+  padding-top: 3rem;
+}
+
+article:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
+}
+
+article h2 {
+  margin-bottom: 1.5rem;
+  font-family: 'league_spartanbold', serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+}
+
+article h3 {
+  margin-bottom: 1.25rem;
+  font-family: 'league_spartanbold', serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+}
+
+article p {
+  margin-bottom: 1.25rem;
+  padding-right: 18rem;
 }
 
 /*

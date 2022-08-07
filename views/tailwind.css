@@ -12,10 +12,7 @@ html{
 }
 
 body{
-    /* https://hypercolor.dev/mesh */
-    background-color: rgb(24, 24, 27);
-    background-image: radial-gradient(at 18% 65%, rgb(229, 229, 229) 0, transparent 82%), radial-gradient(at 45% 80%, rgb(165, 243, 252) 0, transparent 74%), radial-gradient(at 61% 67%, rgb(226, 232, 240) 0, transparent 55%), radial-gradient(at 47% 60%, rgb(30, 64, 175) 0, transparent 60%), radial-gradient(at 65% 20%, rgb(163, 163, 163) 0, transparent 62%), radial-gradient(at 88% 81%, rgb(244, 244, 245) 0, transparent 40%);
-  
+  /* @apply max-w-screen-2xl mx-auto */
 }
 
 #scrollToTop{
@@ -67,11 +64,15 @@ nav{
 
 
 main{
-    @apply min-h-screen ml-60
+    @apply min-h-screen
 }
 
 header {
-    @apply pt-24 pb-60
+      /* https://hypercolor.dev/mesh */
+      background-color: rgb(24, 24, 27);
+      background-image: radial-gradient(at 18% 65%, rgb(229, 229, 229) 0, transparent 82%), radial-gradient(at 45% 80%, rgb(165, 243, 252) 0, transparent 74%), radial-gradient(at 61% 67%, rgb(226, 232, 240) 0, transparent 55%), radial-gradient(at 47% 60%, rgb(30, 64, 175) 0, transparent 60%), radial-gradient(at 65% 20%, rgb(163, 163, 163) 0, transparent 62%), radial-gradient(at 88% 81%, rgb(244, 244, 245) 0, transparent 40%);
+    
+    @apply pt-24 pb-24 pl-64 grid grid-flow-row
 }
 
 
@@ -79,29 +80,45 @@ header {
 
 header h1 {
     @apply text-white font-leaguespartan drop-shadow-md text-6xl mb-6 max-w-screen-lg leading-tight pr-36
+    col-span-2
 }
 
 header h1 span {
     @apply text-blue-100
 }
 
+header picture{
+    @apply row-span-2 align-middle
+}
+
 header picture img{
    @apply rounded-full w-28 lg:w-28 border-4 border-white hover:-rotate-12 transition ease-in-out
+   
 }
 
 header p {
-    @apply text-xl leading-tight max-w-screen-lg pr-32 mb-5
+    @apply text-xl leading-tight max-w-screen-lg pr-64 mb-5
+    col-start-2 
 }
+
 
 
 article {
-    @apply min-h-screen
+    @apply min-h-screen odd:bg-pink-600 pl-64 pt-12
+}
+
+article h2{
+    @apply font-leaguespartan text-3xl mb-6 uppercase
+}
+
+article h3{
+    @apply font-leaguespartan text-xl mb-5 uppercase
 }
 
 
-
-
-
+article p{
+    @apply mb-5 pr-72
+}
 
 
 /*

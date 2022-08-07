@@ -59,18 +59,52 @@ html(lang="en")
       header
         h1 Hello, I'm <span>Patrick Doran</span>, a user experience designer and developer from North Carolina.
       
+        picture
+          source(srcset="patrick_doran_header_photo.webp" media="(min-width: 600px)" type="image/webp")
+          img(src="patrick_doran_header_photo.jpg" title="Photo of Patrick Doran. He's a web developer. In this photo he is wearing sunglasses and smiling")
+
         p Since <time datetime='1998-01'><a target='_blank' href='patrick_doran_work_history.jpg' title="Pepridge Farms remembers">1998 &#x1F4BE;</a></time> I've designed and coded fast user interfaces, modern JavaScript applications, and obsessed about usability and performance. 
         p Lately, I've focused building with <em>Vue</em>, <em>React</em>, and <em>Tailwind</em> for the Microsoft 365/SharePoint platform.
         
-        picture
-            source(srcset="patrick_doran_header_photo.webp" media="(min-width: 600px)" type="image/webp")
-            img(src="patrick_doran_header_photo.jpg" title="Photo of Patrick Doran. He's a web developer. In this photo he is wearing sunglasses and smiling")
-
+      
       article(id="work")
+        h2 The Work
+
+        p I’m an experienced user interface designer and front-end developer. Through twenty years' experience, I'm relied on to find new perspectives, listen and advise, code and develop, push boundaries and bend rules. <a href="#about">Happy to talk shop anytime</a>.
+
+        h3 Front end development &amp; design 
+
+        h3 The Microsoft 365 &amp; SharePoint platform
+
       article(id="speaking")
+        h2 Speaking engagements
+
       article(id="writing")
+        h2 Writing
+        ul(id="svelteComponent")
+
       article(id="history")
+        h2 Professional History
+        
+
       article(id="about")
+        h2 About
+
+          h3 About Patrick Doran 
+
+
+          h3 About this site
+          p PatrickDoran.com has been live on the internet since #{yearSince}. According to the Node server that generated this page, that's close to #{yearsLive} years! PatrickDoran.com is usually in handcrafted HTML, but was for a short time built in unironically with Flash. This particular iteration went live in 2022.
+            ul 
+              li The CSS for the most part is 
+                |
+                a(href='https://Tailwindcss.com' target='_blank' rel='noreferrer') Tailwind.css
+                |  a very fast, framework that looks great and loads so fast. Go ahead and <a href="https://pagespeed.web.dev/report?url=https://patrickdoran.com/" target="_blank">run PageSpeed Insights</a> on it. I'll wait.
+              li This markup is built in Pug, and served via Node and Express.
+              li It utilizes fonts already installed on your device, because who has time to wait? 
+              li A service worker is utilized in case you go offline. This is a Progessive Web App (PWA).
+    
+        
 
     //- div(id="wrap")
       header
