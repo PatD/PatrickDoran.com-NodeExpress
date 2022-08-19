@@ -13,7 +13,7 @@ const port = process.env.PORT || "8000";
 
 // Get JSON file for projects
 
-var projects;
+let projects;
 fs.readFile('projects.json', 'utf8', (err, data) => {
 
     if (err) {
@@ -22,6 +22,11 @@ fs.readFile('projects.json', 'utf8', (err, data) => {
 
         // parse JSON string to JSON object
         const loadedProjects = JSON.parse(data);
+
+        // Create a new attribute that's the title but hyphens instead of spaces.
+        loadedProjects.forEach(element => {
+            element.titleURL = element.Title.replace(/\s/g,"-")
+        });
 
         projects = loadedProjects
     }

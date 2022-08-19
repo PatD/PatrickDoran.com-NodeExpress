@@ -79,7 +79,7 @@ header {
 
 
 header h1 {
-    @apply text-white font-leaguespartan drop-shadow-md text-6xl mb-6 max-w-screen-lg leading-tight pr-36
+    @apply text-white font-leaguespartan drop-shadow-md text-6xl mb-10 max-w-screen-lg leading-tight pr-36
     col-span-2
 }
 
@@ -104,7 +104,7 @@ header p {
 
 
 article {
-    @apply min-h-screen odd:bg-pink-600 pl-64 pt-12
+    @apply min-h-screen odd:bg-pink-600 pt-12 pl-64 pr-48 pb-12
 }
 
 article h2{
@@ -112,13 +112,58 @@ article h2{
 }
 
 article h3{
-    @apply font-leaguespartan text-xl mb-5 uppercase
+    @apply font-leaguespartan text-xl mb-6 uppercase
 }
-
 
 article p{
-    @apply mb-5 pr-72
+    @apply mb-6  
 }
+
+article dl {
+    @apply mb-10 
+}
+
+article dt {
+    @apply font-leaguespartan text-lg mb-2
+}
+
+article dd {
+    @apply inline-grid mr-5
+}
+
+
+article#work{
+    background-color: rgb(0, 0, 0);
+    background-image: radial-gradient(at 100% 28%, rgb(156, 163, 175) 0, transparent 67%), radial-gradient(at 76% 87%, rgb(203, 213, 225) 0, transparent 82%), radial-gradient(at 21% 31%, rgb(4, 120, 87) 0, transparent 73%), radial-gradient(at 65% 22%, rgb(14, 116, 144) 0, transparent 3%), radial-gradient(at 23% 48%, rgb(186, 230, 253) 0, transparent 90%), radial-gradient(at 16% 37%, rgb(120, 53, 15) 0, transparent 1%);
+}
+
+article#work h2 {
+    @apply text-slate-50
+}
+
+article#work section {
+    @apply grid grid-cols-3 gap-6 mb-20
+}
+
+article#work div {
+    @apply p-5 bg-lime-100
+}
+
+article#work img {
+    @apply w-full h-36 object-contain mb-5
+}
+
+article#work h4 {
+    @apply font-leaguespartan mb-2 shadow-slate-50
+}
+
+
+article#speakingWriting{
+    background-color: rgb(124, 45, 18);
+    background-image: radial-gradient(at 69% 100%, rgb(250, 250, 249) 0, transparent 99%), radial-gradient(at 34% 66%, rgb(234, 179, 8) 0, transparent 58%), radial-gradient(at 28% 31%, rgb(12, 74, 110) 0, transparent 68%), radial-gradient(at 9% 98%, rgb(64, 64, 64) 0, transparent 62%), radial-gradient(at 12% 34%, rgb(254, 252, 232) 0, transparent 53%), radial-gradient(at 78% 52%, rgb(220, 38, 38) 0, transparent 58%);
+
+}
+
 
 
 /*
