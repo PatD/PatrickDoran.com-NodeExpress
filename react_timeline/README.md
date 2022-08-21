@@ -1,3 +1,9 @@
+# About this React Timeline
+
+A very tiny React app that loads graphQL data from a headless Wordpress install.  Markup is Tailwind.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

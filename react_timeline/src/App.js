@@ -1,4 +1,5 @@
-import React, {useState ,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import { timeline } from './timeline.js';
 
 // GraphQL endpoint and query:
 const wordPressGraphQL = 'https://patrickdoran.com/headless/graphql'
@@ -15,12 +16,12 @@ const wordPressGraphQLquery = `{
 }`;
 
 // Component for an individual timeline entry
-const PatrickDoranTimelineEntry = (props)=>{
+const PatrickDoranTimelineEntry = (props) => {
   return (
-        <div className='timeline__content'>
-          <strong><time dateTime={props.entryDate}>{props.entryDate}</time></strong>
-          <p><em>{props.entryTitle}</em></p>
-        </div>
+    <div className='timeline__content'>
+      <strong><time dateTime={props.entryDate}>{props.entryDate}</time></strong>
+      <p><em>{props.entryTitle}</em></p>
+    </div>
   )
 }
 
@@ -28,53 +29,69 @@ function App() {
 
   const [isLoading, setIsLoading] = useState();
   const [results, setResults] = useState([]);
+  
 
-  useEffect(() => {
-    function loadData(){
+  function loadData() {
 
-      setIsLoading(true)
+    setIsLoading(true)
 
-      fetch(wordPressGraphQL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          query:wordPressGraphQLquery,
-        })
+    fetch(wordPressGraphQL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: wordPressGraphQLquery,
       })
-        .then(response => response.json())
-        .then(data => {
-          let results = data.data.posts.edges
-          setResults(results)
-          setIsLoading(false)
-        })
-        .catch((error) => {
-          console.error('Error loading data via Wordpress GraphQL plugin: ', error);
-        })
+    })
+      .then(response => response.json())
+      .then(data => {
+        let results = data.data.posts.edges
+        return [setIsLoading(false),setResults(results)]
+      })
+      .catch((error) => {
+        setIsLoading(false)
+        console.error('Error loading data via Wordpress GraphQL plugin: ', error);
+      })
+  }
+
+  // Run once, load our timeline data from headless Wordpress GraphQL!
+  useEffect(() => {
+    if (results.length === 0 && isLoading !== false) {
+      return loadData()
     }
-    loadData()
-  },[]);
+  }, [results,isLoading]);
+
+  // Run once, run the timeline plugin
+  useEffect(() => {
+    if (isLoading === false && results.length > 0) {
+       return timeline(document.querySelectorAll('.timeline'));
+    }
+  }, [isLoading,results])
 
 
-  if (isLoading) {
+  if (isLoading === true) {
     return <p>Loading Timeline ...</p>;
   }
 
-  return (
-    <div className="reactTimeline">
-      <p>Timeline has loaaded! {isLoading}</p>
-
-      {results.map(result =>
+  if (isLoading === false && results.length > 0) {
+    return (
+      <div className='timeline' data-mode='horizontal' data-rtl-mode='true' data-visible-items="5">
+        <div className='timeline__wrap'>
+          <div className='timeline__items'>
+            {results.map(result =>
               <div className='timeline__item' key={result.node.postId}>
-                  <PatrickDoranTimelineEntry 
-                    entryTitle={result.node.title} 
-                    entryDate={result.node.date.substr(0,4)} 
-                  />
+                <PatrickDoranTimelineEntry
+                  entryTitle={result.node.title}
+                  entryDate={result.node.date.substr(0, 4)}
+                />
               </div>
             )}
-    </div>
-  );
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;
