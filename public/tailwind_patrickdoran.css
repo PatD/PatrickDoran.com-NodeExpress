@@ -504,8 +504,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.5rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
+.h-36 {
+  height: 9rem;
+}
+
 .w-auto {
   width: auto;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .transform {
@@ -936,6 +952,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 html {
+  scroll-behavior: smooth;
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
