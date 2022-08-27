@@ -500,28 +500,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-12 {
-  height: 3rem;
-}
-
 .h-36 {
   height: 9rem;
 }
 
-.w-auto {
-  width: auto;
-}
-
-.w-12 {
-  width: 3rem;
+.h-6 {
+  height: 1.5rem;
 }
 
 .w-36 {
   width: 9rem;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .transform {

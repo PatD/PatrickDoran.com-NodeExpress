@@ -14,7 +14,7 @@ onMount(async () => {
 		body: JSON.stringify({
 			query: `
 				{				
-					posts(where: {categoryName: "Speaking Writing"}) {
+					posts(where: {categoryName: "Writing"}) {
 						edges {
 						node {
 							excerpt
@@ -53,7 +53,6 @@ onMount(async () => {
 	</a>
 	<time datetime={listitem.node.date}>{listitem.node.date.substring(0, 4)}</time>
 </li>
-
 {:else}
 <li>Loading GraphQL data from a headless WordPress site into a Svelte component...</li>
 {/each}
