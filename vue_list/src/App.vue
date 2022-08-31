@@ -1,44 +1,58 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-// import HelloWorld from './components/HelloWorld.vue'
-
-
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
 // reactive state
-const count = ref(0)
+let wordPressGraphQL = ref("https://patrickdoran.com/headless/graphql")
+let entries = ref([]);
 
-// functions that mutate state and trigger updates
-function increment() {
-  count.value++
-}
+const getPosts = (async () =>{
+ // Queries Headless WordPress site configured for GraphQL
+  const res = await fetch(wordPressGraphQL.value, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: `
+        {				
+          posts(where: {categoryName: "Speaking"}) {
+            edges {
+            node {
+              excerpt
+              date
+              postId
+              title
+              content
+            }
+            }
+          }
+        }
+      `,
+    }),
+  });
 
-// lifecycle hooks
-onMounted(() => {
-  console.log(`The initial count is ${count.value}.`)
+  // Wait for the results to load
+  let results = await res.json();
+  // Update Vue state
+  return results.data.posts.edges;
 })
 
-
+// When the component is mounted, update state with the 
+// headless Wordpress GraphQL post data
+onMounted(async () => {
+  entries.value = await getPosts()
+});
 </script>
 
 <template>
   <div>
-    <button @click="increment">Count is: {{ count }}</button>
-
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
+    <ul v-for="entry in entries" :key="entry.node.postId">
+      <li>
+        <p>{{ entry.node.title }}</p>
+        <p>{{entry.node.excerpt }}</p>
+        <p>{{ entry.node.content }}</p>
+        <p><time datetime={entry.node.date}>{{entry.node.date.substring(0, 4)}}</time></p>
+        </li>
+    </ul>
+  </div>
 </template>
-
-<style scoped>
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-} */
-</style>
