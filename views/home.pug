@@ -76,13 +76,22 @@ html(lang="en")
 
         section
           each n in projects
-            div(id=n.id)
+            div(class="workitem" id="workitem" + n.id)
 
               img(loading="lazy" src=n.Image alt="Screenshot from the " + n.Title)
               h4= n.Title
 
+            
+            dialog(id="dialog"+n.id)
+              button(class="closeworkitem")
+                | close
+              h4= n.Title
+              
+              img(loading="lazy" src=n.Image alt="Screenshot from the " + n.Title)
+              
               em Role: 
-                cite= n.Role
+              cite= n.Role
+
               p= n.Description
 
               a(href=n.Link target="_blank")
@@ -323,10 +332,7 @@ html(lang="en")
           p The only <strike>var</strike> const is change.
           div(id="patrickdorantimeline")
 
-
-
-    // script.
-    // if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
+    script(defer src='patrickdoran.js')
     script(defer src='patrickdoran_svelte_bundle.js')
     script(defer src='patrickdoran_vue_bundle.js')
     script(defer src='patrickdoran_react_timeline.js')

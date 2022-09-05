@@ -27,6 +27,10 @@ body{
 }
 
 
+dialog::backdrop{
+    @apply bg-black
+}
+
 
 menu{
     @apply flex justify-center fixed top-24 right-10 flex-col gap-5
