@@ -12,11 +12,10 @@
 
 html {
     scroll-behavior: smooth;
-}  
-
-html{
-    @apply bg-red-700
-}
+    background-color: rgb(12, 74, 110);
+    background-image: radial-gradient(at 86% 74%, rgb(125, 211, 252) 0, transparent 100%), radial-gradient(at 53% 8%, rgb(52, 211, 153) 0, transparent 82%), radial-gradient(at 48% 39%, rgb(41, 37, 36) 0, transparent 88%), radial-gradient(at 88% 94%, rgb(103, 232, 249) 0, transparent 58%), radial-gradient(at 45% 60%, rgb(109, 40, 217) 0, transparent 8%), radial-gradient(at 26% 44%, rgb(100, 116, 139) 0, transparent 45%);
+  
+} 
 
 body{
   /* @apply max-w-screen-2xl mx-auto */
@@ -26,9 +25,13 @@ body{
     @apply text-slate-50 font-extrabold fixed block bottom-5 left-10 w-24 mx-auto transition hover:-translate-y-2
 }
 
+dialog{
+    @apply w-full h-full
+}
+
 
 dialog::backdrop{
-    @apply bg-black
+    @apply bg-slate-900 opacity-75
 }
 
 
@@ -88,7 +91,6 @@ header {
 
 
 
-
 header h1 {
     @apply text-white font-leaguespartan drop-shadow-md text-6xl mb-10 max-w-screen-lg leading-tight pr-36
     col-span-2
@@ -112,6 +114,27 @@ header p {
     col-start-2 
 }
 
+header h3{
+    @apply font-leaguespartan text-lg mb-6 uppercase mt-14
+}
+
+header aside {
+    @apply col-span-2
+}
+
+header aside dl {
+    @apply mb-10 
+}
+
+header aside dt {
+    @apply font-leaguespartan text-lg mb-2
+}
+
+header aside dd {
+    @apply inline-grid mr-5
+}
+
+
 
 
 article {
@@ -130,17 +153,6 @@ article p{
     @apply mb-6  
 }
 
-article dl {
-    @apply mb-10 
-}
-
-article dt {
-    @apply font-leaguespartan text-lg mb-2
-}
-
-article dd {
-    @apply inline-grid mr-5
-}
 
 
 article#work{
@@ -157,7 +169,7 @@ article#work section {
 }
 
 article#work div {
-    @apply p-5 bg-lime-100
+    @apply p-5 bg-lime-100 hover:bg-yellow-200 cursor-pointer
 }
 
 article#work img {

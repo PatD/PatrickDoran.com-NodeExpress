@@ -23,5 +23,3 @@ for(let i = 0; i < closeWorkItems.length; i++) {
       dialogToToggle.close();
     })
   }
-
-

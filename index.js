@@ -37,11 +37,6 @@ fs.readFile('projects.json', 'utf8', (err, data) => {
 
 
 
-
-
-
-
-
 // Stuff is in the /views folder
 app.set("views", path.join(__dirname, "views"));
 
@@ -79,9 +74,18 @@ app.get("/", (req, res) => {
 //     res.status(200).send("WHATABYTE: Food For Devs");
 //   });
 
-/**
- * Server Activation
- */
+
+// Homepage gets a view called home
+app.get("/writing", (req, res) => {
+
+    res.render("writing", { 
+        title: "Patrick Doran is writes for the users."
+      });
+ });
+
+
+
+
 
 app.listen(port, () => {
     console.log(`Listening to requests on http://localhost:${port}`);

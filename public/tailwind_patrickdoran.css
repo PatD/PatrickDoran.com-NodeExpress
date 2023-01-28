@@ -484,8 +484,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
+}
+
+.block {
+  display: block;
 }
 
 .inline {
@@ -494,6 +502,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
@@ -520,8 +532,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .items-center {
   align-items: center;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .rounded {
@@ -537,9 +557,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
+.bg-lime-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 252 203 / var(--tw-bg-opacity));
+}
+
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-2 {
@@ -945,8 +974,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 html {
   scroll-behavior: smooth;
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+  background-color: rgb(12, 74, 110);
+  background-image: radial-gradient(at 86% 74%, rgb(125, 211, 252) 0, transparent 100%), radial-gradient(at 53% 8%, rgb(52, 211, 153) 0, transparent 82%), radial-gradient(at 48% 39%, rgb(41, 37, 36) 0, transparent 88%), radial-gradient(at 88% 94%, rgb(103, 232, 249) 0, transparent 58%), radial-gradient(at 45% 60%, rgb(109, 40, 217) 0, transparent 8%), radial-gradient(at 26% 44%, rgb(100, 116, 139) 0, transparent 45%);
 }
 
 body{
@@ -976,14 +1005,21 @@ body{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+dialog {
+  height: 100%;
+  width: 100%;
+}
+
 dialog::-webkit-backdrop {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  opacity: 0.75;
 }
 
 dialog::backdrop {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  opacity: 0.75;
 }
 
 menu {
@@ -1158,6 +1194,35 @@ header p {
   line-height: 1.25;
 }
 
+header h3 {
+  margin-bottom: 1.5rem;
+  margin-top: 3.5rem;
+  font-family: 'league_spartanbold', serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+}
+
+header aside {
+  grid-column: span 2 / span 2;
+}
+
+header aside dl {
+  margin-bottom: 2.5rem;
+}
+
+header aside dt {
+  margin-bottom: 0.5rem;
+  font-family: 'league_spartanbold', serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+header aside dd {
+  margin-right: 1.25rem;
+  display: inline-grid;
+}
+
 article {
   min-height: 100vh;
   padding-top: 3rem;
@@ -1191,22 +1256,6 @@ article p {
   margin-bottom: 1.5rem;
 }
 
-article dl {
-  margin-bottom: 2.5rem;
-}
-
-article dt {
-  margin-bottom: 0.5rem;
-  font-family: 'league_spartanbold', serif;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-article dd {
-  margin-right: 1.25rem;
-  display: inline-grid;
-}
-
 article#work{
   background-color: rgb(0, 0, 0);
   background-image: radial-gradient(at 100% 28%, rgb(156, 163, 175) 0, transparent 67%), radial-gradient(at 76% 87%, rgb(203, 213, 225) 0, transparent 82%), radial-gradient(at 21% 31%, rgb(4, 120, 87) 0, transparent 73%), radial-gradient(at 65% 22%, rgb(14, 116, 144) 0, transparent 3%), radial-gradient(at 23% 48%, rgb(186, 230, 253) 0, transparent 90%), radial-gradient(at 16% 37%, rgb(120, 53, 15) 0, transparent 1%);
@@ -1225,9 +1274,15 @@ article#work section {
 }
 
 article#work div {
+  cursor: pointer;
   --tw-bg-opacity: 1;
   background-color: rgb(236 252 203 / var(--tw-bg-opacity));
   padding: 1.25rem;
+}
+
+article#work div:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
 article#work img {
@@ -1569,6 +1624,11 @@ article h2{
 
 
 */
+
+.hover\:bg-yellow-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+}
 
 @media (min-width: 640px) {
   .sm\:inline {
